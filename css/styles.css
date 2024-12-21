@@ -161,14 +161,69 @@ header {
     text-decoration: none;
 }
 
-.bg-image-index {
-    height: 600px;
-    width: 1600px;
-    padding-top: 10px;
-    background-image: url("../images/bg-index.jpg");
-    background-position: center;
+.div1 {
+    margin: 0;
+    font-family: Arial, sans-serif;
     display: flex;
-    justify-content: center;
+    justify-content:center;
     align-items: center;
-    text-align: center;
-}
+    background-color: #f4f4f4;
+  }
+  
+  .container {
+    display: flex;
+    max-width: 1550px;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .left-content {
+    flex:initial;
+  }
+  
+  .main-image {
+    width: 1100px;
+    height: 500px;
+  }
+  
+  .right-content {
+    flex: 1;
+    padding: 40px;
+    background-color: #2c593e;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  
+  .right-content h1 {
+    font-size: 40px;
+    line-height: 1.2;
+  }
+  
+  .right-content h1 span {
+    font-style: italic;
+  }
+  
+  .right-content p {
+    margin: 20px 0;
+    font-size: 16px;
+  }
+  
+  .shop-now {
+    background-color: #ff9900;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .shop-now:hover {
+    background-color: #cc7a00;
+  }
