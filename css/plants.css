@@ -164,7 +164,9 @@ header {
     color: inherit;
     text-decoration: none;
 }
-
+.heading1{
+    text-align: center;
+    }
 
 
 
