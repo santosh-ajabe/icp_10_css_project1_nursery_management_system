@@ -198,5 +198,16 @@ header {
         padding:0px;
         margin-top: 5px;
          }
+         .btn{
+            border-color: green;
+             border-radius: 50px;
+             outline: 0;
+             padding: 12px;
+             color:green;
+             background-color: #8bed8e;
+             text-align: center;
+             cursor: pointer;
+            font-size: 18px;
+           }
 
 
