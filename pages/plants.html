@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plants page</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f8f1;
+            color: #333;
+        }
+
+        header {
+            background: linear-gradient(135deg, #3a9e67, #2b7a4b);
+            padding: 20px 30px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            width: 100%;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            transition: background 0.3s ease;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: white;
+            display: flex;
+            align-items: center;
+            text-transform: uppercase;
+            transition: transform 0.3s ease;
+        }
+
+        .logo img {
+            width: 50px;
+            margin-right: 15px;
+        }
+
+        .logo:hover {
+            transform: scale(1.1);
+        }
+
+        .search-bar {
+            display: flex;
+            align-items: center;
+            position: relative;
+            flex: 1;
+            margin-left: 20px;
+        }
+
+        .search-bar input {
+            padding: 15px 20px;
+            font-size: 18px;
+            border-radius: 30px;
+            border: none;
+            outline: none;
+            width: 80%;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: width 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .search-bar input:focus {
+            width: 100%;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .search-bar button {
+            position: absolute;
+            right: 0;
+            padding: 15px 30px;
+            background-color: #4caf50;
+            border: none;
+            border-radius: 30px;
+            color: white;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background 0.3s ease, transform 0.3s ease;
+        }
+
+        .search-bar button:hover {
+            background-color: #388e3c;
+            transform: scale(1.1);
+        }
+
+        .icons {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            margin-left: 20px;
+            margin-right: 0;
+        }
+
+        .icon {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: white;
+            display: flex;
+            align-items: center;
+            text-transform: uppercase;
+            transition: transform 0.3s ease;
+        }
+
+        .icon-img {
+            width: 50px;
+            margin-right: 15px;
+        }
+
+        .icon:hover {
+            transform: scale(1.1);
+        }
+
+        .navbar-nav {
+            display: flex;
+            gap: 25px;
+            align-items: center;
+        }
+
+        .navbar-nav li {
+            position: relative;
+            list-style: none;
+        }
+
+        .navbar-nav a {
+            text-decoration: none;
+            color: white;
+            font-size: 20px;
+            font-weight: 700;
+            padding: 10px 15px;
+            display: block;
+            transition: color 0.3s ease, transform 0.3s ease, background 0.3s ease;
+            border-radius: 5px;
+        }
+
+        .navbar-nav a:hover {
+            color: #4caf50;
+            background-color: rgba(255, 255, 255, 0.2);
+            transform: scale(1.1);
+        }
+
+        .dropdown {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #388e3c;
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .navbar-nav li:hover .dropdown {
+            display: block;
+        }
+
+        .dropdown a {
+            color: white;
+            padding: 10px 20px;
+            font-size: 14px;
+            transition: background 0.3s ease;
+        }
+
+        .dropdown a:hover {
+            background-color: #4caf50;
+        }
+
+        @media screen and (max-width: 768px) {
+            .navbar-nav {
+                display: none;
+                flex-direction: column;
+                background-color: #388e3c;
+                position: absolute;
+                top: 70px;
+                left: 0;
+                width: 100%;
+                padding: 16px 0;
+            }
+
+            .menu-toggle:checked~.navbar-nav {
+                display: flex;
+            }
+
+            .menu-toggle-label {
+                display: flex;
+                cursor: pointer;
+                flex-direction: column;
+            }
+
+            .menu-toggle-label div {
+                width: 25px;
+                height: 3px;
+                background: white;
+                margin: 4px 0;
+            }
+
+            .search-bar {
+                display: flex;
+                margin-top: 20px;
+                width: 100%;
+                justify-content: center;
+            }
+
+            .search-bar input {
+                width: 80%;
+                margin-bottom: 10px;
+            }
+
+            .icons {
+                display: none;
+            }
+        }
+        .heading1{
+        text-align: center;
+        }
+        .main-container{
+        display:flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+       }
+       .container{
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        width: 250px;
+        height: 350px;
+        margin: 20px;
+        text-align: center;
+        font-family: arial;
+        padding: 20px;
+        border: solid  rgb(206, 194, 194); 
+       }
+       .img{
+        height: 200px;
+        width: 200px;
+       }
+       .name{
+        padding: 10px;
+        margin: 0px;
+        font-size: 20px;
+       }
+       .price{
+        color:black;
+        font-size: 20px;
+        padding:0px;
+        margin-top: 5px;
+         }
+        .btn{
+        border-color: green;
+        border-radius: 50px;
+        outline: 0;
+        padding: 12px;
+        color:green;
+        background-color: #8bed8e;
+        text-align: center;
+        cursor: pointer;
+        font-size: 18px;
+        }
+        .menu-toggle {
+            display: none;
+        }
+        footer {
+            background-color: #2b7a4b;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        footer a:hover {
+            color: #ff6f61;
+        }
+
+        footer ul {
+            list-style: none;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+    </style>
+    <link rel="stylesheet" href="./../css/plants.css">
+</head>
+
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <img src="./../images/index/logo.jpg" alt="NatureNest Logo"> NatureNest
+            </div>
+            <div class="search-bar">
+                <input type="text" placeholder="Search products...">
+                <button>Search</button>
+            </div>
+
+            <div class="icons">
+                <img src="./../images/index/logo.jpg" class="icon icon-img">
+                <img src="./../images/index/logo.jpg" class="icon icon-img">
+            </div>
+
+            <input type="checkbox" class="menu-toggle" id="menu-toggle">
+            <label for="menu-toggle" class="menu-toggle-label">
+                <div></div>
+                <div></div>
+                <div></div>
+            </label>
+
+            <ul class="navbar-nav">
+                <li><a href="./pages/plants.html">Plants</a>
+                    <div class="dropdown">
+                        <a href="#">Indoor Plants</a>
+                        <a href="#">Pet Friendly Plants</a>
+                        <a href="#">Flowering Plants</a>
+                        <a href="#">Fruit Plants</a>
+                        <a href="#">Medicinal Plants</a>
+                    </div>
+                </li>
+                <li><a href="./../pages/seeds.html">Seeds</a>
+                    <div class="dropdown">
+                        <a href="#">Flower Seeds</a>
+                        <a href="#">Vegetable Seeds</a>
+                        <a href="#">Flower Bulbs</a>
+                        <a href="#">Fruit Seeds</a>
+                        <a href="#">Herbs Seeds</a>
+                    </div>
+                </li>
+                <li><a href="./../pages/pots_n_planters.html">Pots & Planters</a>
+                    <div class="dropdown">
+                        <a href="#">Plastic Pots</a>
+                        <a href="#">Ceramic Pots</a>
+                        <a href="#">Hanging Planters</a>
+                        <a href="#">Wooden Planters</a>
+                        <a href="#">Plant Stands</a>
+                        <a href="#">Seedling Trays</a>
+                    </div>
+                </li>
+                <li><a href="./../pages/plantcare.html">Plant Care</a>
+                    <div class="dropdown">
+                        <a href="#">Potting Mix</a>
+                        <a href="#">Cocopeat</a>
+                        <a href="#">Urea</a>
+                        <a href="#">Fungicide</a>
+                        <a href="#">Gardening Tools</a>
+                    </div>
+                </li>
+                <li><a href="./../pages/gifts.html">Gifts</a></li>
+                <li><a href="./../pages/blogs.html">Blogs</a></li>
+                <li><a href="./../pages/about.html">About Us</a></li>
+                <li><a href="./../pages/contact.html">Contact Us</a></li>
+            </ul>
+        </div>
+    </header>
+<h1 class="heading1">Indoor Plants</h1>
+<div class="main-container">
+    <div class="container">
+        <img src="./../images/plants/money_plant" alt="money plant" class="img">
+        <h1 class="name">Money Plant</h1>
+        <p class="price">20 ₹</p>
+        <button class="btn"><b>Add to Cart</b></button>
+    </div>
+    <div class="container">
+        <img src="./../images/plants/bamboo" alt="bamboo plant" class="img">
+        <h1 class="name">Bamboo Plant</h1>
+        <p class="price">30 ₹</p>
+        <button class="btn"><b>Add to Cart</b></button>
+    </div>
+    <div class="container">
+        <img src="./../images/plants/insulin_plant" alt="insulin plant" class="img">
+        <h1 class="name">Insulin Plant</h1>
+        <p class="price">10 ₹</p>
+        <button class="btn"><b>Add to Cart</b></button>
+    </div>
+    <div class="container">
+        <img src="./../images/plants/gokarna_plant.jpg" alt="gokarna plant" class="img">
+        <h1 class="name">Gokarna</h1>
+        <p class="price">35 ₹</p>
+        <button class="btn"><b>Add to Cart</b></button>
+    </div>
+    <div class="container">
+        <img src="./../images/plants/peace_lily" alt="peace lily" class="img">
+        <h1 class="name">Peace Lily</h1>
+        <p class="price">20 ₹</p>
+        <button class="btn"><b>Add to Cart</b></button>
+   </div>
+    <div class="container">
+        <img src="./../images/plants/rhoeo_plant" alt="rhoeo plant" class="img">
+        <h1 class="name">Rhoeo Plant</h1>
+        <p class="price">10 ₹</p>
+        <button class="btn"><b>Add to Cart</b></button>
+   </div>
+    <div class="container">
+        <img src="./../images/plants/bird_of_paradise" alt="bird of paradise" class="img">
+        <h1 class="name">Bird Of Paradise</h1>
+        <p class="price">25 ₹</p>
+        <button class="btn"><b>Add to Cart</b></button>
+    </div>
+    <div class="container">
+        <img src="./../images/plants/krishna_kamal" alt="krishna kamal" class="img">
+        <h1 class="name">Krishna Kamal</h1>
+        <p class="price">30 ₹</p>
+        <button class="btn"><b>Add to Cart</b></button>
+    </div>
+
+    <h1 class="heading1">Flowering Plants</h1>
+    <div class="main-container">
+      <div class="container">
+                <img src="./../images/plants/Red_Hibiscus.avif" alt="Red Hibiscus" class="img">
+                <h1 class="name">Hibisus</h1>
+                <p class="price">20 ₹</p>
+                <button class="btn"><b>Add to Cart</b></button>
+      </div>
+      <div class="container">
+               <img src="./../images/plants/marigold" alt="marigold" class="img">
+                <h1 class="name">Marigold</h1>
+                <p class="price">30 ₹</p>
+                <button class="btn"><b>Add to Cart</b></button>
+      </div>
+      <div class="container">
+                 <img src="./../images/plants/button_rose" alt="button rose" class="img">
+                <h1 class="name">Miniature Rose</h1>
+                <p class="price">40 ₹</p>
+                <button class="btn"><b>Add to Cart</b></button>
+      </div>
+      <div class="container">
+                <img src="./../images/plants/rose" alt="rose" class="img">
+                 <h1 class="name">Rose</h1>
+                 <p class="price">20 ₹</p>
+                <button class="btn"><b>Add to Cart</b></button>
+      </div>
+      <div class="container">
+                  <img src="./../images/plants/son-champa" alt="son-champa" class="img">
+                  <h1 class="name">Son Champa</h1>
+                  <p class="price">20 ₹</p>
+                       <button class="btn"><b>Add to Cart</b></button>
+      </div>
+      <div class="container">
+        <img src="./../images/plants/vinica" alt="vinica" class="img">
+                        <h1 class="name">Vinica</h1>
+                        <p class="price">10 ₹</p>
+                       <button class="btn"><b>Add to Cart</b></button>
+      </div>
+      <div class="container">
+        <img src="./../images/plants/kagda" alt="kagda" class="img">
+                        <h1 class="name">Kagda</h1>
+                        <p class="price">20 ₹</p>
+                       <button class="btn"><b>Add to Cart</b></button>
+                     </div>
+               <div class="container">
+                <img src="./../images/plants/portulaca" alt="portulaca" class="img">
+                        <h1 class="name">Portulaca</h1>
+                        <p class="price">30 ₹</p>
+                       <button class="btn"><b>Add to Cart</b></button>
+                     </div>
+
+ <h1 class="heading1">Medicinal Plants</h1>
+            <div class="main-container">
+              <div class="container">
+                <img src="./../images/plants/tulsi" alt="tulsi" class="img">
+                    <h1 class="name">Tulsi</h1>
+                    <p class="price">10 ₹</p>
+                    <button class="btn"><b>Add to Cart</b></button>
+              </div>
+              <div class="container">
+                <img src="./../images/plants/alovera" alt="alovera" class="img">
+                    <h1 class="name">Alovera</h1>
+                    <p class="price">20 ₹</p>
+                    <button class="btn"><b>Add to Cart</b></button>
+              </div>
+              <div class="container">
+                <img src="./../images/plants/amla" alt="amla" class="img">
+                    <h1 class="name">Amla</h1>
+                    <p class="price">30 ₹</p>
+                    <button class="btn"><b>Add to Cart</b></button>
+              </div>
+              <div class="container">
+                <img src="./../images/plants/cloves" alt="cloves" class="img">
+                    <h1 class="name">Cloves</h1>
+                    <p class="price">40 ₹</p>
+                   <button class="btn"><b>Add to Cart</b></button>
+                 </div>
+              <div class="container">
+                <img src="./../images/plants/mint" alt="mint" class="img">
+                    <h1 class="name">Mint</h1>
+                    <p class="price">10 ₹</p>
+                    <button class="btn"><b>Add to Cart</b></button>
+              </div>
+              <div class="container">
+                <img src="./../images/plants/neem" alt="neem" class="img">
+                    <h1 class="name">Neem</h1>
+                    <p class="price">20 ₹</p>
+                    <button class="btn"><b>Add to Cart</b></button>
+              </div>
+              <div class="container">
+                <img src="./../images/plants/lemon_grass" alt="lemon_grass" class="img">
+                      <h1 class="name">Lemon grass</h1>
+                      <p class="price">5 ₹</p>
+                      <button class="btn"><b>Add to Cart</b></button>
+              </div>
+              <div class="container">
+                <img src="./../images/plants/peper_betel" alt="peper_betel" class="img">
+                       <h1 class="name">Peper betel</h1>
+                       <p class="price">10 ₹</p>
+                       <button class="btn"><b>Add to Cart</b></button>
+              </div>
+
+    <h1 class="heading1">Fruit  Plants</h1>
+              <div class="main-container">
+                 <div class="container">
+                    <img src="./../images/plants/mango_tree" alt="mango" class="img">
+                    <h1 class="name">Mango</h1>
+                    <p class="price">10 ₹</p>
+                    <button class="btn"><b>Add to Cart</b></button>
+                         </div>
+                 <div class="container">
+                    <img src="./../images/plants/litchi" alt="litchi" class="img">
+                    <h1 class="name">Litchi</h1>
+                    <p class="price">20 ₹</p>
+                    <button class="btn"><b>Add to Cart</b></button>
+                         </div>
+                 <div class="container">
+                    <img src="./../images/plants/mosambi" alt="mosambi" class="img">
+                   <h1 class="name">Mosambi</h1>
+                   <p class="price">30 ₹</p>
+                  <button class="btn"><b>Add to Cart</b></button>
+                        </div>
+                  <div class="container">
+                    <img src="./../images/plants/jamun" alt="jamun" class="img">
+                   <h1 class="name">Jamun</h1>
+                   <p class="price">10 ₹</p>
+                   <button class="btn"><b>Add to Cart</b></button>
+                       </div>
+           <div class="container">
+            <img src="./../images/plants/chiku" alt="chiku" class="img">
+                    <h1 class="name">Chiku</h1>
+                    <p class="price">15 ₹</p>
+                   <button class="btn"><b>Add to Cart</b></button>
+                 </div>
+           <div class="container">
+            <img src="./../images/plants/guava" alt="guava" class="img">
+                    <h1 class="name">guava</h1>
+                    <p class="price">5 ₹</p>
+                   <button class="btn"><b>Add to Cart</b></button>
+                 </div>
+           <div class="container">
+            <img src="./../images/plants/dragon_fruit" alt="dragon_fruit" class="img">
+                    <h1 class="name">Dragon Fruit</h1>
+                    <p class="price">25 ₹</p>
+                   <button class="btn"><b>Add to Cart</b></button>
+                 </div>
+           <div class="container">
+            <img src="./../images/plants/sitaphal" alt="sitaphal" class="img">
+                    <h1 class="name">Sitaphal</h1>
+                    <p class="price">20 ₹</p>
+                   <button class="btn"><b>Add to Cart</b></button>
+                 </div>
+            </div>
+            <footer>
+                <p>&copy; 2024 NatureNest. All Rights Reserved.</p>
+                <p>Follow Us: <a href="#">Facebook</a> | <a href="#">Instagram</a> | <a href="#">Twitter</a></p>
+            </footer>
+</body>      
+</html>
