@@ -1,5 +1,5 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: Arial, sans-serif; 
     margin: 0;
     padding: 0;
   }
@@ -58,11 +58,4 @@ body {
   .team{
     align-items: center;
 
-  }
-
-  footer {
-    background-color: #f0f0f0;
-    padding: 10px;
-    text-align: center;
-    clear: both;
   }
