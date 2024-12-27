@@ -229,30 +229,40 @@
         }
         .seedsowing{
             width: 100%;
-            height: 480px;
+            height: 460px;
+            margin-top: 20px;
         }
-        .categories{
+        .titlee{
             font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
             font-weight: 500;
-            
+            text-align: center;
             color: #1a5d1e;
-            font-size: 35px;
+            font-size: 41px;
             margin-top: 20px;
             margin-left: 30px;
-            margin-bottom: 20px;
+            margin-bottom: 30px;
         }
         .type-containers{
             display: flex;
+            flex-wrap: wrap;
             justify-content: space-around;
          }
      
         .type5{
-            width: 270px;
+            width: 280px;
             border-style: solid;
             border-color: #333;
             border-width: 2px;
             margin: 5px;
         }
+        .names{
+            text-align: center;
+            font-family:Georgia, 'Times New Roman', Times, serif;
+            font-size: 25px;
+            font-weight: 800;
+            color: #1a5d1e;
+        }
+
         .type5:hover{
             border: none;
             box-shadow: 0 0 8px 6px gray;
@@ -329,20 +339,41 @@
             </ul>
         </div>
     </header>
-    <div>
-    <img src="../images/seeds/seedsowing.png" class="seedsowing"/>
-    </div>
-   <center>
-     <div class="categories">
+  
+   
+     <div class="titlee">
         SHOP BY CATEGORIES
     </div>
-    </center>
+    
     <div class="type-containers">
-        <img src="../images/seeds/flower.webp" alt="FLOWERS" class="type5"/>
-        <img src="../images/seeds/vegetable.webp" class="type5"/>
-        <img src="../images/seeds/bulb.webp" class="type5"/>
-        <img src="../images/seeds/fruit.webp" class="type5"/>
-        <img src="../images/seeds/herbs.webp" class="type5"/>
+    
+       <div> <img src="../images/seeds/flower.webp"  class="type5"/>
+            <p class="names">Flower-seeds</p>
+       </div>
+        
+       <div> <img src="../images/seeds/vegetable.webp" class="type5"/>
+            <p class="names">Vegetable-seeds</p>
+        </div>
+
+        <div> <img src="../images/seeds/bulb.webp" class="type5"/>
+            <p class="names"> Flower-Bulbs</p>
+        </div>
+
+       <div> <img src="../images/seeds/fruit.webp" class="type5"/>
+            <p class="names">Fruit-seeds</p>
+        </div>
+
+       <div> <img src="../images/seeds/herbs.webp" class="type5"/>
+         <p class="names">Herb-seeds</p>
+       </div>
     </div>
+    <div>
+        <img src="../images/seeds/seedsowing.png" class="seedsowing"/>
+     </div>
+     <div class="titlee">Flower-seeds</div>
+     <div class="titlee">Vegetable-seeds</div>
+     <div class="titlee">Flower-Bulbs</div>
+     <div class="titlee">Fruit-seeds</div>
+     <div class="titlee">Herb-seeds</div>
 </body>
 </html>
