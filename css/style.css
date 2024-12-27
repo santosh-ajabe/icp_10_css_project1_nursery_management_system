@@ -8,3 +8,9 @@ body{
   background-position:center;
   background-attachment: fixed;
 }
+.box{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height:90vh;
+}
