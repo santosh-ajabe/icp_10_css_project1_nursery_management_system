@@ -79,3 +79,6 @@ i{
   color: #fff;
   margin-top: 10px;
 }
+.left{
+  display: flex;
+}
