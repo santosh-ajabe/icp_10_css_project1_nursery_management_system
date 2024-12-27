@@ -82,3 +82,7 @@ i{
 .left{
   display: flex;
 }
+label a{
+  color: #fff;
+  text-decoration: none;
+}
