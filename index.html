@@ -147,7 +147,7 @@
         }
 
         .navbar-nav a:hover {
-            color: #4caf50;
+            color: #f7f9f7;
             background-color: rgba(255, 255, 255, 0.2);
             transform: scale(1.1);
         }
@@ -339,6 +339,73 @@
             justify-content: center;
             gap: 20px;
         }
+    .bestsellers {
+        padding: 50px 20px;
+        background-color: #f9fafb;
+        text-align: center;
+        margin-bottom: 50px; /* Adds space above the footer */
+    }
+
+    .section-title {
+        font-size: 2.5rem;
+        font-weight: bold;
+        color: #2b7a4b;
+        margin-bottom: 30px;
+    }
+
+    .bestseller-products {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 20px;
+    }
+
+    .bestseller-products .product-card {
+        background-color: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .bestseller-products .product-card:hover {
+        transform: scale(1.05);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    .bestseller-products img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 8px;
+    }
+
+    .bestseller-products h3 {
+        font-size: 1.5rem;
+        color: #2b7a4b;
+        margin-top: 15px;
+    }
+
+    .bestseller-products p {
+        font-size: 1rem;
+        color: #777;
+        margin: 10px 0;
+    }
+
+    .bestseller-products button {
+        padding: 10px 20px;
+        background-color: #4caf50;
+        border: none;
+        border-radius: 30px;
+        color: white;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background 0.3s ease, transform 0.3s ease;
+    }
+
+    .bestseller-products button:hover {
+        background-color: #388e3c;
+        transform: scale(1.05);
+    }
     </style>
 </head>
 <body>
@@ -353,8 +420,12 @@
             </div>
 
             <div class="icons">
-                <img src="./images/index/logo.jpg" class="icon icon-img">
-                <img src="./images/index/logo.jpg" class="icon icon-img">
+                <a href="./pages/login.html">
+                    <img src="./icons/user.png" class="icon icon-img">
+                </a>
+                <a href="./pages/cart.html">
+                    <img src="./icons/cart.png" class="icon icon-img">
+                </a>
             </div>
 
             <input type="checkbox" class="menu-toggle" id="menu-toggle">
@@ -368,7 +439,6 @@
                 <li><a href="./pages/plants.html">Plants</a>
                     <div class="dropdown">
                         <a href="#">Indoor Plants</a>
-                        <a href="#">Pet Friendly Plants</a>
                         <a href="#">Flowering Plants</a>
                         <a href="#">Fruit Plants</a>
                         <a href="#">Medicinal Plants</a>
@@ -420,20 +490,55 @@
         <div class="product-card">
             <img src="./images/index/image1.avif" alt="Product">
             <h3>Indoor Plants</h3>
-            <p>Beautiful plants for your home or office space</p>
-            <button>Shop Now</button>
-        </div>
-        <div class="product-card">
-            <img src="./images/index/image2.avif" alt="Product">
-            <h3>Flowering Plants</h3>
-            <p>Bring color and fragrance to your garden</p>
-            <button>Shop Now</button>
+            <p>Beautiful plants for your home<br>or office space</p>
+            <a href="#"><button>Shop Now</button></a>
         </div>
         <div class="product-card">
             <img src="./images/index/image3.avif" alt="Product">
+            <h3>Flowering Plants</h3>
+            <p>Bring color and fragrance<br>to your garden</p>
+            <a href="#"><button>Shop Now</button></a>
+        </div>
+        <div class="product-card">
+            <img src="./images/index/image2.avif" alt="Product">
             <h3>Pots & Planters</h3>
-            <p>Perfect planters for every plant type</p>
-            <button>Shop Now</button>
+            <p>Perfect planters for<br>every plant type</p>
+            <a href="./pages/pots_n_planters.html"><button>Shop Now</button></a>
+        </div>
+        <div class="product-card">
+            <img src="./images/index/image4.avif" alt="Product">
+            <h3>Gift Hampers</h3>
+            <p>Thoughtful and unique<br>gifts for every occasion</p>
+            <a href="./pages/gifts.html"><button>Shop Now</button></a>
+        </div>
+    </section>
+    <section class="bestsellers">
+        <h2 class="section-title">Our Bestsellers</h2>
+        <div class="bestseller-products">
+            <div class="product-card">
+                <img src="./images/index/snake_plant.avif" alt="Bestseller Plant">
+                <h3>Snake Plant</h3>
+                <p>Low-maintenance indoor plant<br>perfect for air purification</p>
+                <a href="#"><button>Add To Cart</button></a>
+            </div>
+            <div class="product-card">
+                <img src="./images/index/ceramic_pot.avif" alt="Bestseller Pot">
+                <h3>Ceramic Pot</h3>
+                <p>Elegant pots to enhance<br>your plant décor</p>
+                <a href="#"><button>Add To Cart</button></a>
+            </div>
+            <div class="product-card">
+                <img src="./images/index/herb_seeds.avif" alt="Bestseller Seeds">
+                <h3>Herb Seeds</h3>
+                <p>Grow fresh herbs at home<br>with ease</p>
+                <a href="#"><button>Add To Cart</button></a>
+            </div>
+            <div class="product-card">
+                <img src="./images/index/green_gift_box.avif" alt="Bestseller Gift">
+                <h3>Green Gift Box</h3>
+                <p>Thoughtful gift for plant lovers<br>and nature enthusiasts</p>
+                <a href="#"><button>Add To Cart</button></a>
+            </div>
         </div>
     </section>
 
