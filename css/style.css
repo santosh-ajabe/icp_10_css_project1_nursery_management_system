@@ -27,3 +27,10 @@ span{
   justify-content: center;
   padding: 10px 0 10px 0;
 }
+header{
+  color: #fff;
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  padding: 10px 0 10px 0;
+}
