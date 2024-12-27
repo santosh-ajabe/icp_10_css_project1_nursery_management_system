@@ -56,3 +56,15 @@ i{
 }
 ::-webkit-input-placeholder{
   color: #fff;
+}
+.submit{
+  border: none;
+  border-radius: 30px;
+  font-size: 15px;
+  height: 45px;
+  outline: none;
+  width: 100%;
+  background:rgba(255,255,255,0.7) ;
+  cursor:pointer ;
+  transition: .3s;
+}
