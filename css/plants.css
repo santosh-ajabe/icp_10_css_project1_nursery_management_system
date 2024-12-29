@@ -168,9 +168,70 @@ header {
     transition: background 0.3s ease;
 }
 
+
 .dropdown a:hover {
     background-color: #4caf50;
 }
+
+.menu-toggle {
+    display: none;
+}
+/*circle*/
+
+.heading1{
+    text-align: center;
+    }
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    padding: 0 20px;
+}
+
+.section-header h2 {
+    font-size: 24px;
+    color: #333;
+}
+
+.categories {
+   display: flex;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    justify-items: center;
+    padding: 0 40px;
+    flex-wrap: wrap;
+}
+.category {
+    text-align: center;
+}
+
+.circle-image {
+    width: 300px;
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+    margin-right: 30px;
+    border:  gray;
+    justify-content: space-between;
+}
+
+.category p {
+    font-size: 16px;
+    color: #333;
+}
+.plants{
+    text-align: center;
+}
+.explore{
+    padding: 10px;
+}
+
+
+
 
 @media screen and (max-width: 768px) {
     .navbar-nav {
@@ -183,6 +244,7 @@ header {
         width: 100%;
         padding: 16px 0;
     }
+
 
     .menu-toggle:checked~.navbar-nav {
         display: flex;
@@ -217,58 +279,3 @@ header {
         display: none;
     }
 }
-
-.menu-toggle {
-    display: none;
-}
-/*circle*/
-
-.heading1{
-    text-align: center;
-    }
-.section-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 30px;
-    padding: 0 20px;
-}
-
-.section-header h2 {
-    font-size: 24px;
-    color: #333;
-}
-
-.categories {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 20px;
-    justify-items: center;
-    padding: 0 40px;
-}
-.category {
-    text-align: center;
-}
-
-.circle-image {
-    width: 300px;
-    height: 300px;
-    background-size: cover;
-    background-position: center;
-    border-radius: 50%;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    margin-bottom: 40px;
-    border:  gray;
-}
-
-.category p {
-    font-size: 16px;
-    color: #333;
-}
-.plants{
-    text-align: center;
-}
-.explore{
-    padding: 10px;
-}
-

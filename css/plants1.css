@@ -55,9 +55,17 @@
       width: 50px;
       justify-items: center;
       margin: 20px;
+      margin-bottom: 0px;
       padding:0 700px;
     }
-    
+    .back{
+      margin: 20px;
+      margin-top: 0px;
+      text-align: center;
+      padding:0 700px;
+      color: green;
+      
+    }
 
     /*footer */
     footer{
@@ -84,9 +92,7 @@
             justify-content: center;
             gap: 20px;
         }
-    
-    
 
-
+       
 
 
