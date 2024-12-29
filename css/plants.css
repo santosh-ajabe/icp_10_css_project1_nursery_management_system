@@ -223,7 +223,9 @@ header {
 }
 /*circle*/
 
-
+.heading1{
+    text-align: center;
+    }
 .section-header {
     display: flex;
     justify-content: space-between;
@@ -255,7 +257,8 @@ header {
     background-position: center;
     border-radius: 50%;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    margin-bottom: 10px;
+    margin-bottom: 40px;
+    border:  gray;
 }
 
 .category p {
@@ -265,7 +268,7 @@ header {
 .plants{
     text-align: center;
 }
-
-
-
+.explore{
+    padding: 10px;
+}
 
