@@ -5,6 +5,274 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WE MAKE YOUR LIFE GREEN...</title>
     <style>
+         * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f8f1;
+            color: #333;
+        }
+
+        header {
+            background: linear-gradient(135deg, #3a9e67, #2b7a4b);
+            padding: 20px 30px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            width: 100%;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            transition: background 0.3s ease;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: white;
+            display: flex;
+            align-items: center;
+            text-transform: uppercase;
+            transition: transform 0.3s ease;
+        }
+
+        .logo img {
+            width: 50px;
+            margin-right: 15px;
+        }
+
+        .logo:hover {
+            transform: scale(1.1);
+        }
+
+        .search-bar {
+            display: flex;
+            align-items: center;
+            position: relative;
+            flex: 1;
+            margin-left: 20px;
+        }
+
+        .search-bar input {
+            padding: 15px 20px;
+            font-size: 18px;
+            border-radius: 30px;
+            border: none;
+            outline: none;
+            width: 80%;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: width 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .search-bar input:focus {
+            width: 100%;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .search-bar button {
+            position: absolute;
+            right: 0;
+            padding: 15px 30px;
+            background-color: #4caf50;
+            border: none;
+            border-radius: 30px;
+            color: white;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background 0.3s ease, transform 0.3s ease;
+        }
+
+        .search-bar button:hover {
+            background-color: #388e3c;
+            transform: scale(1.1);
+        }
+
+        .icons {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            margin-left: 20px;
+            margin-right: 0;
+        }
+
+        .icon {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: white;
+            display: flex;
+            align-items: center;
+            text-transform: uppercase;
+            transition: transform 0.3s ease;
+        }
+
+        .icon-img {
+            width: 50px;
+            margin-right: 15px;
+        }
+
+        .icon:hover {
+            transform: scale(1.1);
+        }
+
+        .navbar-nav {
+            display: flex;
+            gap: 25px;
+            align-items: center;
+        }
+
+        .navbar-nav li {
+            position: relative;
+            list-style: none;
+        }
+
+        .navbar-nav a {
+            text-decoration: none;
+            color: white;
+            font-size: 20px;
+            font-weight: 700;
+            padding: 10px 15px;
+            display: block;
+            transition: color 0.3s ease, transform 0.3s ease, background 0.3s ease;
+            border-radius: 5px;
+        }
+
+        .navbar-nav a:hover {
+            color: #4caf50;
+            background-color: rgba(255, 255, 255, 0.2);
+            transform: scale(1.1);
+        }
+
+        .dropdown {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #388e3c;
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .navbar-nav li:hover .dropdown {
+            display: block;
+        }
+
+        .dropdown a {
+            color: white;
+            padding: 10px 20px;
+            font-size: 14px;
+            transition: background 0.3s ease;
+        }
+
+        .dropdown a:hover {
+            background-color: #4caf50;
+        }
+
+        @media screen and (max-width: 768px) {
+            .navbar-nav {
+                display: none;
+                flex-direction: column;
+                background-color: #388e3c;
+                position: absolute;
+                top: 70px;
+                left: 0;
+                width: 100%;
+                padding: 16px 0;
+            }
+
+            .menu-toggle:checked~.navbar-nav {
+                display: flex;
+            }
+
+            .menu-toggle-label {
+                display: flex;
+                cursor: pointer;
+                flex-direction: column;
+            }
+
+            .menu-toggle-label div {
+                width: 25px;
+                height: 3px;
+                background: white;
+                margin: 4px 0;
+            }
+
+            .search-bar {
+                display: flex;
+                margin-top: 20px;
+                width: 100%;
+                justify-content: center;
+            }
+
+            .search-bar input {
+                width: 80%;
+                margin-bottom: 10px;
+            }
+
+            .icons {
+                display: none;
+            }
+        }
+
+        .menu-toggle {
+            display: none;
+        }
+        .titlee{
+            font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            font-weight: 500;
+            text-align: center;
+            color: #1a5d1e;
+            font-size: 41px;
+            margin-top: 20px;
+            margin-left: 30px;
+            margin-bottom: 30px;
+        }
+        .type-containers{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+         }
+     
+        .type5{
+            width: 280px;
+            border-style: solid;
+            border-color: #333;
+            border-width: 2px;
+            margin: 5px;
+        }
+        .type2{
+            height: 310px; 
+            width: 264px;
+        }
+      
+        .names{
+            text-align: center;
+            font-family:Georgia, 'Times New Roman', Times, serif;
+            font-size: 25px;
+            font-weight: 800;
+            color: #1a5d1e;
+        }
+        .addition{
+            font-size: 20px;
+            color: #1a5d1e;
+        }
+
+        .type5:hover{
+            border: none;
+            box-shadow: 0 0 8px 6px gray;
+            transition: 0.5;
+        }
         * {
             margin: 0;
             padding: 0;
@@ -107,24 +375,75 @@
     </style>
 </head>
 <body>
+</head>
+<body>
     <header>
-
         <div class="navbar">
-        </div>
-
-        <nav class="menu">
-            <ul>
-                <li><a href="./pages/plants.html">Plants</a></li>
-                <li><a href="./pages/seeds.html">Seeds</a></li>
-                <li><a href="./pages/pots_n_planters.html">Pots & Planters</a></li>
-                <li><a href="./pages/plantcare.html">Plantcare</a></li>
-                <li><a href="./pages/blogs.html">Blogs</a></li>
-                <li><a href="./pages/gifts.html">Gifts</a></li>
-                <li><a href="./pages/about.html">About Us</a></li>
-                <li><a href="./pages/contact.html">Contact Us</a></li>
+            <div class="logo">
+                <img src="./../images/index/logo.jpg" alt="NatureNest Logo"> NatureNest
+            </div>
+            <div class="search-bar">
+                <input type="text" placeholder="Search products...">
+                <button>Search</button>
+            </div>
+    
+            <div class="icons">
+                <img src="./../images/index/logo.jpg" class="icon icon-img">
+                <img src="./../images/index/logo.jpg" class="icon icon-img">
+            </div>
+    
+            <input type="checkbox" class="menu-toggle" id="menu-toggle">
+            <label for="menu-toggle" class="menu-toggle-label">
+                <div></div>
+                <div></div>
+                <div></div>
+            </label>
+    
+            <ul class="navbar-nav">
+                <li><a href="./../pages/plants.html">Plants</a>
+                    <div class="dropdown">
+                        <a href="#">Indoor Plants</a>
+                        <a href="#">Pet Friendly Plants</a>
+                        <a href="#">Flowering Plants</a>
+                        <a href="#">Fruit Plants</a>
+                        <a href="#">Medicinal Plants</a>
+                    </div>
+                </li>
+                <li><a href="./../pages/seeds.html">Seeds</a>
+                    <div class="dropdown">
+                        <a href="#">Flower Seeds</a>
+                        <a href="#">Vegetable Seeds</a>
+                        <a href="#">Flower Bulbs</a>
+                        <a href="#">Fruit Seeds</a>
+                        <a href="#">Herbs Seeds</a>
+                    </div>
+                </li>
+                <li><a href="./../pages/pots_n_planters.html">Pots & Planters</a>
+                    <div class="dropdown">
+                        <a href="#">Plastic Pots</a>
+                        <a href="#">Ceramic Pots</a>
+                        <a href="#">Hanging Planters</a>
+                        <a href="#">Wooden Planters</a>
+                        <a href="#">Plant Stands</a>
+                        <a href="#">Seedling Trays</a>
+                    </div>
+                </li>
+                <li><a href="./../pages/plantcare.html">Plant Care</a>
+                    <div class="dropdown">
+                        <a href="#">Potting Mix</a>
+                        <a href="#">Cocopeat</a>
+                        <a href="#">Urea</a>
+                        <a href="#">Fungicide</a>
+                        <a href="#">Gardening Tools</a>
+                    </div>
+                </li>
+                <li><a href="./../pages/gifts.html">Gifts</a></li>
+                <li><a href="./../pages/blogs.html">Blogs</a></li>
+                <li><a href="./../pages/about.html">About Us</a></li>
+                <li><a href="./../pages/contact.html">Contact Us</a></li>
             </ul>
-        </nav>
-    </header>
+        </div>
+    </header>   
     </div>
     <header>
         <div class="logo">
