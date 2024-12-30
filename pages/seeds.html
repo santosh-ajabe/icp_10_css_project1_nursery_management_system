@@ -1,11 +1,568 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Seeds-Page</title>
+    <title>seeds-page</title>
+    <style>
+             * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f8f1;
+            color: #333;
+        }
+
+        header {
+            background: linear-gradient(135deg, #3a9e67, #2b7a4b);
+            padding: 20px 30px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            width: 100%;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            transition: background 0.3s ease;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: white;
+            display: flex;
+            align-items: center;
+            text-transform: uppercase;
+            transition: transform 0.3s ease;
+        }
+
+        .logo img {
+            width: 50px;
+            margin-right: 15px;
+        }
+
+        .logo:hover {
+            transform: scale(1.1);
+        }
+
+        .search-bar {
+            display: flex;
+            align-items: center;
+            position: relative;
+            flex: 1;
+            margin-left: 20px;
+        }
+
+        .search-bar input {
+            padding: 15px 20px;
+            font-size: 18px;
+            border-radius: 30px;
+            border: none;
+            outline: none;
+            width: 80%;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: width 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .search-bar input:focus {
+            width: 100%;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .search-bar button {
+            position: absolute;
+            right: 0;
+            padding: 15px 30px;
+            background-color: #4caf50;
+            border: none;
+            border-radius: 30px;
+            color: white;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background 0.3s ease, transform 0.3s ease;
+        }
+
+        .search-bar button:hover {
+            background-color: #388e3c;
+            transform: scale(1.1);
+        }
+
+        .icons {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            margin-left: 20px;
+            margin-right: 0;
+        }
+
+        .icon {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: white;
+            display: flex;
+            align-items: center;
+            text-transform: uppercase;
+            transition: transform 0.3s ease;
+        }
+
+        .icon-img {
+            width: 50px;
+            margin-right: 15px;
+        }
+
+        .icon:hover {
+            transform: scale(1.1);
+        }
+
+        .navbar-nav {
+            display: flex;
+            gap: 25px;
+            align-items: center;
+        }
+
+        .navbar-nav li {
+            position: relative;
+            list-style: none;
+        }
+
+        .navbar-nav a {
+            text-decoration: none;
+            color: white;
+            font-size: 20px;
+            font-weight: 700;
+            padding: 10px 15px;
+            display: block;
+            transition: color 0.3s ease, transform 0.3s ease, background 0.3s ease;
+            border-radius: 5px;
+        }
+
+        .navbar-nav a:hover {
+            color: #4caf50;
+            background-color: rgba(255, 255, 255, 0.2);
+            transform: scale(1.1);
+        }
+
+        .dropdown {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #388e3c;
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .navbar-nav li:hover .dropdown {
+            display: block;
+        }
+
+        .dropdown a {
+            color: white;
+            padding: 10px 20px;
+            font-size: 14px;
+            transition: background 0.3s ease;
+        }
+
+        .dropdown a:hover {
+            background-color: #4caf50;
+        }
+
+        @media screen and (max-width: 768px) {
+            .navbar-nav {
+                display: none;
+                flex-direction: column;
+                background-color: #388e3c;
+                position: absolute;
+                top: 70px;
+                left: 0;
+                width: 100%;
+                padding: 16px 0;
+            }
+
+            .menu-toggle:checked~.navbar-nav {
+                display: flex;
+            }
+
+            .menu-toggle-label {
+                display: flex;
+                cursor: pointer;
+                flex-direction: column;
+            }
+
+            .menu-toggle-label div {
+                width: 25px;
+                height: 3px;
+                background: white;
+                margin: 4px 0;
+            }
+
+            .search-bar {
+                display: flex;
+                margin-top: 20px;
+                width: 100%;
+                justify-content: center;
+            }
+
+            .search-bar input {
+                width: 80%;
+                margin-bottom: 10px;
+            }
+
+            .icons {
+                display: none;
+            }
+        }
+
+        .menu-toggle {
+            display: none;
+        }
+        .seedsowing{
+            width: 100%;
+            height: 450px;
+            margin-bottom: 30px;
+            
+        }
+        .seed2{
+            margin-top: 35px;
+        }
+        .titlee{
+            font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            font-weight: 500;
+            text-align: center;
+            color: #1a5d1e;
+            font-size: 41px;
+            margin-top: 20px;
+            margin-left: 30px;
+            margin-bottom: 30px;
+        }
+        .type-containers{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            text-align:center;
+         }
+     
+        .type5{
+            width: 280px;
+            border-style: solid;
+            border-color: #333;
+            border-width: 2px;
+            margin: 5px;
+            border-radius: 10px;
+        }
+        .type2{
+            height: 310px; 
+            width: 264px;
+        }
+      
+        .names{
+            text-align: center;
+            font-family:Georgia, 'Times New Roman', Times, serif;
+            font-size: 25px;
+            font-weight: 800;
+            color: #1a5d1e;
+        }
+        .addition{
+            font-size: 20px;
+            color: #1a5d1e;
+        }
+
+        .type5:hover{
+            border: none;
+            box-shadow: 0 0 8px 6px gray;
+            transition: 0.5;
+        }
+        .rupees{
+            color: black;
+            font-family:Georgia, 'Times New Roman', Times, serif;
+            text-align: center;
+            font-size: 23px;
+            margin-bottom: 5px;
+        }
+        .buy-button{
+            color:black;
+            background-color: #4caf50;
+            font-size: 25px;
+            border-radius: 10px;
+            padding: 5px;
+            font-weight: 700;
+            font-family:Georgia, 'Times New Roman', Times, serif;
+            justify-content: center;
+            margin-bottom: 40px;
+        }
+        .buy-button:hover{
+            border: none;
+            box-shadow: 0 0 8px 6px gray;
+            background-color: aliceblue;
+            transition: 0.5;
+        }
+    
+    
+
+    </style>
 </head>
 <body>
-    <h1>Information Of Seeds</h1>
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <img src="../images/index/logo.jpg" alt="NatureNest Logo"> NatureNest
+            </div>
+            <div class="search-bar">
+                <input type="text" placeholder="Search products...">
+                <button>Search</button>
+            </div>
+
+            <div class="icons">
+                <img src="../images/index/logo.jpg" class="icon icon-img">
+                <img src="../images/index/logo.jpg" class="icon icon-img">
+            </div>
+
+            <input type="checkbox" class="menu-toggle" id="menu-toggle">
+            <label for="menu-toggle" class="menu-toggle-label">
+                <div></div>
+                <div></div>
+                <div></div>
+            </label>
+
+            <ul class="navbar-nav">
+                <li><a href="../pages/plants.html">Plants</a>
+                    <div class="dropdown">
+                        <a href="#">Indoor Plants</a>
+                        <a href="#">Pet Friendly Plants</a>
+                        <a href="#">Flowering Plants</a>
+                        <a href="#">Fruit Plants</a>
+                        <a href="#">Medicinal Plants</a>
+                    </div>
+                </li>
+                <li><a href="../pages/seeds.html">Seeds</a>
+                    <div class="dropdown">
+                        <a href="#">Flower Seeds</a>
+                        <a href="#">Vegetable Seeds</a>
+                        <a href="#">Flower Bulbs</a>
+                        <a href="#">Fruit Seeds</a>
+                        <a href="#">Herbs Seeds</a>
+                    </div>
+                </li>
+                <li><a href="../pages/pots_n_planters.html">Pots & Planters</a>
+                    <div class="dropdown">
+                        <a href="#">Plastic Pots</a>
+                        <a href="#">Ceramic Pots</a>
+                        <a href="#">Hanging Planters</a>
+                        <a href="#">Wooden Planters</a>
+                        <a href="#">Plant Stands</a>
+                        <a href="#">Seedling Trays</a>
+                    </div>
+                </li>
+                <li><a href="../pages/plantcare.html">Plant Care</a>
+                    <div class="dropdown">
+                        <a href="#">Potting Mix</a>
+                        <a href="#">Cocopeat</a>
+                        <a href="#">Urea</a>
+                        <a href="#">Fungicide</a>
+                        <a href="#">Gardening Tools</a>
+                    </div>
+                </li>
+                <li><a href="./pages/gifts.html">Gifts</a></li>
+                <li><a href="./pages/blogs.html">Blogs</a></li>
+                <li><a href="./pages/about.html">About Us</a></li>
+                <li><a href="./pages/contact.html">Contact Us</a></li>
+            </ul>
+        </div>
+    </header>
+        <img src="../images/seeds/seedsowing.png" class="seedsowing"/>
+    
+   
+     <div class="titlee">
+        SHOP BY CATEGORIES
+    </div>
+    
+    <div class="type-containers">
+    
+       <div> <img src="../images/seeds/flower.webp"  class="type5"/>
+            <p class="names">Flower-seeds</p>
+       </div>
+        
+       <div> <img src="../images/seeds/vegetable.webp" class="type5"/>
+            <p class="names">Vegetable-seeds</p>
+        </div>
+
+        <div> <img src="../images/seeds/bulb.webp" class="type5"/>
+            <p class="names"> Flower-Bulbs</p>
+        </div>
+
+       <div> <img src="../images/seeds/fruit.webp" class="type5"/>
+            <p class="names">Fruit-seeds</p>
+        </div>
+
+       <div> <img src="../images/seeds/herbs.webp" class="type5"/>
+         <p class="names">Herb-seeds</p>
+       </div>
+    </div>
+    <img src="../images/seeds/seedsgift.png" class="seedsowing seed2"/>
+   
+     <div class="titlee">Flower-seeds</div>
+
+     <div class="type-containers">
+    
+     
+        <div> <img src="../images/flowerseed/California_Poppy_Mix.webp" class="type5 type2"/>
+             <p class="names addition"><u>California_Poppy_Mix</u><br/><h3 class="rupees">₹40</h3></p>
+             <div class="buy-button">Buy Now</div>
+         </div>
+
+         <div> <img src="../images/flowerseed/Carinatum_Mix-Winter.webp"  class="type5 type2"/>
+            <p class="names addition"><u>Carinatum_Mix-Winter</u><br/><h3 class="rupees">₹50</h3></p>
+            <div class="buy-button">Buy Now</div>
+       </div>
+ 
+         <div> <img src="../images/flowerseed/Clarkia_Elegans.webp" class="type5 type2"/>
+             <p class="names addition"><u>Clarkia_Elegans</u><br/><h3 class="rupees">₹45</h3></p>
+             <div class="buy-button">Buy Now</div>
+         </div>
+ 
+        <div> <img src="../images/flowerseed/Cleome_Spinosa_Mix-Seeds.webp" class="type5 type2"/>
+             <p class="names addition"><u>Cleome_Spinosa_Mix-Seeds</u><br/><h3 class="rupees">₹40</h3></p>
+             <div class="buy-button">Buy Now</div>
+         </div>
+ 
+        <div> <img src="../images/flowerseed/Dahlia_Unwins_Hybrids_Flower.webp" class="type5 type2"/>
+          <p class="names addition"><u>Dahlia-Unwiins</u><br/><h3 class="rupees">₹70</h3></p>
+          <div class="buy-button">Buy Now</div>
+        </div>
+
+
+        </div>
+
+
+     <div class="titlee">Vegetable-seeds</div>
+       
+    <div class="type-containers">
+    
+     
+        <div> <img src="../images/seeds/Brinjal_Purple_Oval.webp" class="type5 type2"/>
+             <p class="names addition"><u>Brinjal-Purple-Oval</u><br/><h3 class="rupees">₹40</h3></p>
+             <div class="buy-button">Buy Now</div>
+         </div>
+
+         <div> <img src="../images/seeds/Brinjal_Long_Green.webp"  class="type5 type2"/>
+            <p class="names addition"><u>Brinjal-Long-Green</u><br/><h3 class="rupees">₹100</h3></p>
+            <div class="buy-button">Buy Now</div>
+       </div>
+ 
+         <div> <img src="../images/seeds/BrinjalKalongi.webp" class="type5 type2"/>
+             <p class="names addition"><u>Brinjal-Kalongi</u><br/><h3 class="rupees">₹45</h3></p>
+             <div class="buy-button">Buy Now</div>
+         </div>
+ 
+        <div> <img src="../images/seeds/BrinjalSmallOval.jpg" class="type5 type2"/>
+             <p class="names addition"><u>Brinjal-Small-Oval</u><br/><h3 class="rupees">₹40</h3></p>
+             <div class="buy-button">Buy Now</div>
+         </div>
+ 
+        <div> <img src="../images/seeds/KohlrabiPurple.webp" class="type5 type2"/>
+          <p class="names addition"><u>Kohlrabi-Purple</u><br/><h3 class="rupees">₹70</h3></p>
+          <div class="buy-button">Buy Now</div>
+        </div>
+        . 
+      
+
+        <div> <img src="../images/seeds/Cabbage-Red.webp"  class="type5 type2"/>
+           <p class="names addition"><u>Cabbage-Red</u><br/><h3 class="rupees">₹55</h3></p>
+           <div class="buy-button">Buy Now</div>
+      </div>
+
+      <div> <img src="../images/seeds/cabbageSivoy.webp" class="type5 type2"/>
+        <p class="names addition"><u>Cabbage-Sivoy</u><br/><h3 class="rupees">₹68</h3></p>
+        <div class="buy-button">Buy Now</div>
+     </div>
+
+        <div> <img src="../images/seeds/Cabbage.webp" class="type5 type2"/>
+            <p class="names addition"><u>Cabbage</u><br/><h3 class="rupees">₹30</h3></p>
+            <div class="buy-button">Buy Now</div>
+        </div>
+
+        <div> <img src="../images/seeds/Kawach_open.webp" class="type5 type2"/>
+            <p class="names addition"><u>Kawach-open</u><br/><h3 class="rupees">₹90</h3></p>
+            <div class="buy-button">Buy Now</div>
+          </div>
+
+       <div> <img src="../images/seeds/Cabbage_Desi.webp" class="type5 type2"/>
+            <p class="names addition"><u>Cabbage-Desi</u><br/><h3 class="rupees">₹60</h3></p>
+            <div class="buy-button">Buy Now</div>
+        </div>
+        . 
+        
+        <div> <img src="../images/seeds/Capsicum-Red_and_Yellow.webp"  class="type5 type2"/>
+            <p class="names addition"><u>Capsicum-Red-and-Yellow</u><br/><h3 class="rupees">₹100</h3></p>
+            <div class="buy-button">Buy Now</div>
+       </div>
+ 
+       <div> <img src="../images/seeds/Capsicum_Green.webp" class="type5 type2"/>
+         <p class="names addition"><u>Capsicum-Green</u><br/><h3 class="rupees">₹50</h3></p>
+         <div class="buy-button">Buy Now</div>
+      </div>
+ 
+         <div> <img src="../images/seeds/Capsicum_Mix_Color.webp" class="type5 type2"/>
+             <p class="names addition"><u>Capsicum-Mix-Color</u><br/><h3 class="rupees">₹84</h3></p>
+             <div class="buy-button">Buy Now</div>
+         </div>
+ 
+         <div> <img src="../images/seeds/TomatoDarkPurple.webp" class="type5 type2"/>
+             <p class="names addition"><u>Tomato-Dark-Purple</u><br/><h3 class="rupees">₹87</h3></p>
+             <div class="buy-button">Buy Now</div>
+           </div>
+ 
+        <div> <img src="../images/seeds/TomatoRed.webp" class="type5 type2"/>
+             <p class="names addition"><u>Tomato-Red</u><br/><h3 class="rupees">₹99</h3></p>
+             <div class="buy-button">Buy Now</div>
+         </div>
+         . 
+         <div> <img src="../images/seeds/Capsicum_Mix_color3.webp"  class="type5 type2"/>
+            <p class="names addition"><u>Capsicum-Mix-Color</u><br/><h3 class="rupees">₹120</h3></p>
+            <div class="buy-button">Buy Now</div>
+       </div>
+ 
+       <div> <img src="../images/seeds/Kasoori_Methi.webp" class="type5 type2"/>
+         <p class="names addition"><u>Kasoori-Methi</u><br/><h3 class="rupees">₹40</h3></p>
+         <div class="buy-button">Buy Now</div>
+      </div>
+ 
+         <div> <img src="../images/seeds/Cauliflower_Purple.jpg" class="type5 type2"/>
+             <p class="names addition"><u>Cauliflower-Purple</u><br/><h3 class="rupees">₹90</h3></p>
+             <div class="buy-button">Buy Now</div>
+         </div>
+ 
+         <div> <img src="../images/seeds/Cauliflower_Yellow.webp" class="type5 type2"/>
+             <p class="names addition"><u>Cauliflower-Yellow</u><br/><h3 class="rupees">₹50</h3></p>
+             <div class="buy-button">Buy Now</div>
+           </div>
+ 
+        <div> <img src="../images/seeds/CauliflowerGreen.webp" class="type5 type2"/>
+             <p class="names addition"><u>Cauliflower-Green</u><br/><h3 class="rupees">₹40</h3></p>
+             <div class="buy-button">Buy Now</div>
+         </div>
+
+
+
+     </div>
+    
+   
+    
+    
+
+     <div class="titlee">Flower-Bulbs</div>
+     <div class="titlee">Fruit-seeds</div>
+     <div class="titlee">Herb-seeds</div>
 </body>
 </html>
