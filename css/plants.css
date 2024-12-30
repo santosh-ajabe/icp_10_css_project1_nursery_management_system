@@ -218,6 +218,11 @@ header {
     border:  gray;
     justify-content: space-between;
 }
+.circle-image:hover{
+    border: none;
+    box-shadow: 0 0 4px 2px gray;
+    transition: 1s;
+}
 
 .category p {
     font-size: 16px;
@@ -230,9 +235,6 @@ header {
     padding: 10px;
 }
 
-
-
-
 @media screen and (max-width: 768px) {
     .navbar-nav {
         display: none;
@@ -244,7 +246,6 @@ header {
         width: 100%;
         padding: 16px 0;
     }
-
 
     .menu-toggle:checked~.navbar-nav {
         display: flex;
@@ -279,3 +280,5 @@ header {
         display: none;
     }
 }
+
+
