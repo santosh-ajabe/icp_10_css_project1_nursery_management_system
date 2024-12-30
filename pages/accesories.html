@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessories Page</title>
+    <link rel="stylesheet" href="../css/nav.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .header {
+            text-align: center;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .header img {
+            width: 100%;
+            max-height: 400px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .header .description {
+            margin-top: 15px;
+            font-size: 18px;
+            color: #555;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .card {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .card img {
+            width: 100%;
+            height: auto;
+            transition: transform 0.3s;
+        }
+
+        .card:hover img {
+            transform: scale(-5px);
+        }
+
+        .card-content {
+            padding: 15px;
+        }
+
+        .card h3 {
+            font-size: 22px;
+            margin: 10px 0;
+        }
+
+        .card .price {
+            color: #28a745;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .card .original-price {
+            color: #888;
+            text-decoration: line-through;
+            margin-left: 8px;
+        }
+
+        .card button {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .card button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <img src="./../images/index/logo.jpg" alt="NatureNest Logo"> NatureNest
+            </div>
+            <div class="search-bar">
+                <input type="text" placeholder="Search products...">
+                <button>Search</button>
+            </div>
+
+            <div class="icons">
+                <a href="./pages/login.html">
+                    <img src="./../icons/user.png" class="icon icon-img">
+                </a>
+                <a href="./pages/cart.html">
+                    <img src="./../icons/cart.png" class="icon icon-img">
+                </a>
+            </div>
+
+            <input type="checkbox" class="menu-toggle" id="menu-toggle">
+            <label for="menu-toggle" class="menu-toggle-label">
+                <div></div>
+                <div></div>
+                <div></div>
+            </label>
+
+            <ul class="navbar-nav">
+                <li><a href="./pages/plants.html">Plants</a>
+                    <div class="dropdown">
+                        <a href="#">Indoor Plants</a>
+                        <a href="#">Flowering Plants</a>
+                        <a href="#">Fruit Plants</a>
+                        <a href="#">Medicinal Plants</a>
+                    </div>
+                </li>
+                <li><a href="./pages/seeds.html">Seeds</a>
+                    <div class="dropdown">
+                        <a href="#">Flower Seeds</a>
+                        <a href="#">Vegetable Seeds</a>
+                        <a href="#">Flower Bulbs</a>
+                        <a href="#">Fruit Seeds</a>
+                        <a href="#">Herbs Seeds</a>
+                    </div>
+                </li>
+                <li><a href="./pages/pots_n_planters.html">Pots & Planters</a>
+                    <div class="dropdown">
+                        <a href="#">Plastic Pots</a>
+                        <a href="#">Ceramic Pots</a>
+                        <a href="#">Hanging Planters</a>
+                        <a href="#">Wooden Planters</a>
+                        <a href="#">Plant Stands</a>
+                        <a href="#">Seedling Trays</a>
+                    </div>
+                </li>
+                <li><a href="./pages/plantcare.html">Plant Care</a>
+                    <div class="dropdown">
+                        <a href="fertilizer.html"> Fertilizer And Potting Mix</a>
+                        <a href="garden.html">Gardening Tools</a>
+                        <a href="accesories.html">Our Accesories</a>
+                       
+                    </div>
+                </li>
+                <li><a href="./pages/gifts.html">Gifts</a></li>
+                <li><a href="./pages/blogs.html">Blogs</a></li>
+                <li><a href="./pages/about.html">About Us</a></li>
+                <li><a href="./pages/contact.html">Contact Us</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <div class="header">
+        <img src="../images/index/toolsmain.jpg" alt="Accessories Banner">
+        <p class="description">Discover the perfect accessories for your gardening needs. From pruning tools to soil moisture meters, we have everything to make your garden thrive.</p>
+    </div>
+
+    <div class="container">
+        <div class="card">
+            <img src="../images/plants/fertilizerstick.jpg" alt="Heavy Duty Bypass Pruner">
+            <div class="card-content">
+                <h3>Heavy Duty Bypass Pruner</h3>
+                <div>
+                    <span class="price">₹599</span>
+                    <span class="original-price">₹999</span>
+                </div>
+                <button>Add to Cart</button>
+            </div>
+        </div>
+        <div class="card">
+            <img src="../images/plants/grillstand.jpg" alt="Mini Garden Bonsai Set">
+            <div class="card-content">
+                <h3>Mini Garden Bonsai Set</h3>
+                <div>
+                    <span class="price">₹399</span>
+                    <span class="original-price">₹599</span>
+                </div>
+                <button>Add to Cart</button>
+            </div>
+        </div>
+        <div class="card">
+            <img src="../images/plants/minigrill.jpg" alt="Bent Scraper">
+            <div class="card-content">
+                <h3>Bent Scraper</h3>
+                <div>
+                    <span class="price">₹295</span>
+                    <span class="original-price">₹385</span>
+                </div>
+                <button>Add to Cart</button>
+            </div>
+        </div>
+        <div class="card">
+            <img src="../images/plants/pebbles.jpg" alt="Hardwood Support Sticks">
+            <div class="card-content">
+                <h3>Hardwood Support Sticks</h3>
+                <div>
+                    <span class="price">₹499</span>
+                    <span class="original-price">₹749</span>
+                </div>
+                <button>Add to Cart</button>
+            </div>
+        </div>
+        <div class="card">
+            <img src="../images/plants/shadenet.jpg" alt="Garden Shears">
+            <div class="card-content">
+                <h3>Garden Shears</h3>
+                <div>
+                    <span class="price">₹650</span>
+                    <span class="original-price">₹850</span>
+                </div>
+                <button>Add to Cart</button>
+            </div>
+        </div>
+        <div class="card">
+            <img src="../images/plants/plantsuppor.jpg" alt="Soil Moisture Meter">
+            <div class="card-content">
+                <h3>Soil Moisture Meter</h3>
+                <div>
+                    <span class="price">₹350</span>
+                    <span class="original-price">₹500</span>
+                </div>
+                <button>Add to Cart</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

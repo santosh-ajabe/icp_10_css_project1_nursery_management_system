@@ -1,25 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Plant Care</title>
+    <link rel="stylesheet" href="./../css/nav.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f9;
-            color: #333;
-        }
 
-        header {
+    <style>
+        /* .header h1 {
             background-color: #5cb85c;
             color: white;
-            padding: 20px;
+            padding: 10px;
             text-align: center;
-        }
+            margin: 15px; */
+
 
         .section {
             margin: 20px;
@@ -71,22 +67,83 @@
             border-radius: 5px;
         }
 
-        .contact-buttons a:hover {
-            background-color: #4cae4c;
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        /* header h1 {
+            background-color: aqua;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            margin-top: 15px; */
+
+
+        .large-image {
+            width: 100%;
+            height: auto;
+            margin-top: 10%;
+
+        }
+
+        .section {
+            margin: 20px;
+            padding: 15px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            background-color: #fff;
+        }
+
+        .section h2 {
+            color: #4CAF50;
+        }
+
+        .section img {
+            max-width: 100%;
+            border-radius: 8px;
+            margin-top: 10px;
+        }
+
+        .product {
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .product img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+
+        iframe {
+            width: 80%;
+            height: 415px;
+            margin-top: 20px;
+            border: none;
         }
 
         footer {
             text-align: center;
-            padding: 10px;
-            background-color: #5cb85c;
+            padding: 5px 10px;
+            background-color: #333;
             color: white;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
         }
 
-        footer .social-icons {
-            margin-top: 10px;
+        footer h3 {
+            font-size: 18px;
+            margin: 5px 0;
         }
 
         footer .social-icons a {
@@ -99,109 +156,202 @@
         footer .social-icons a:hover {
             color: #ddd;
         }
+
+        @media (max-width: 600px) {
+            .product {
+                flex-direction: column;
+            }
+
+            iframe {
+                height: 200px;
+            }
+        }
     </style>
 </head>
+
 <body>
+
     <header>
-        <h1>Plant Care Management</h1>
+        <div class="navbar">
+            <div class="logo">
+                <img src="./../images/index/logo.jpg" alt="NatureNest Logo"> NatureNest
+            </div>
+            <div class="search-bar">
+                <input type="text" placeholder="Search products...">
+                <button>Search</button>
+            </div>
+
+            <div class="icons">
+                <a href="./pages/login.html">
+                    <img src="./../icons/user.png" class="icon icon-img">
+                </a>
+                <a href="./pages/cart.html">
+                    <img src="./../icons/cart.png" class="icon icon-img">
+                </a>
+            </div>
+
+            <input type="checkbox" class="menu-toggle" id="menu-toggle">
+            <label for="menu-toggle" class="menu-toggle-label">
+                <div></div>
+                <div></div>
+                <div></div>
+            </label>
+
+            <ul class="navbar-nav">
+                <li><a href="./pages/plants.html">Plants</a>
+                    <div class="dropdown">
+                        <a href="#">Indoor Plants</a>
+                        <a href="#">Flowering Plants</a>
+                        <a href="#">Fruit Plants</a>
+                        <a href="#">Medicinal Plants</a>
+                    </div>
+                </li>
+                <li><a href="./pages/seeds.html">Seeds</a>
+                    <div class="dropdown">
+                        <a href="#">Flower Seeds</a>
+                        <a href="#">Vegetable Seeds</a>
+                        <a href="#">Flower Bulbs</a>
+                        <a href="#">Fruit Seeds</a>
+                        <a href="#">Herbs Seeds</a>
+                    </div>
+                </li>
+                <li><a href="./pages/pots_n_planters.html">Pots & Planters</a>
+                    <div class="dropdown">
+                        <a href="#">Plastic Pots</a>
+                        <a href="#">Ceramic Pots</a>
+                        <a href="#">Hanging Planters</a>
+                        <a href="#">Wooden Planters</a>
+                        <a href="#">Plant Stands</a>
+                        <a href="#">Seedling Trays</a>
+                    </div>
+                </li>
+                <li><a href="./pages/plantcare.html">Plant Care</a>
+                    <div class="dropdown">
+                        <a href="fertilizer.html"> Fertilizer And Potting Mix</a>
+                        <a href="garden.html">Gardening Tools</a>
+                        <a href="accesories.html">Our Accesories</a>
+
+                    </div>
+                </li>
+                <li><a href="./pages/gifts.html">Gifts</a></li>
+                <li><a href="./pages/blogs.html">Blogs</a></li>
+                <li><a href="./pages/about.html">About Us</a></li>
+                <li><a href="./pages/contact.html">Contact Us</a></li>
+            </ul>
+        </div>
+            
     </header>
 
+    <br><br>
+
+
+
+
+
+    <!-- <header>
+
+   
+        <h1>Plant Care Management</h1>
+    </header> -->
+
+    <img src="../images/index/plantcaremain.jpg" alt="Plant Care Image" class="large-image">
+
     <main>
+
+        <div class="section">
+            <h2>Tree Plantation Guidance</h2><br>
+            <p>Tree plantation is crucial for improving the environment. Always select native species for better
+                adaptation and growth. Prepare the soil well by adding compost or organic matter, and ensure proper
+                spacing to allow trees to grow healthily.</p><br>
+            <h2>Plant Caring Tips</h2><br>
+            <p>Caring for plants involves consistent watering, regular pruning, and protection from pests. Ensure to
+                follow the specific light and watering needs of your plants for optimal growth.</p>
+        </div>
+
+        <div class="section" id="products">
+            <h2>Our Services</h2>
+            <div class="product">
+                <img src="../images/plants/plantcare3.jpg" alt="Ficus Bonsai">
+                <div>
+                    <h3>Plantation</h3>
+                    <p>Tree plantation is the process of planting trees to enhance biodiversity, combat climate change,<br>
+                        and improve air quality. It promotes ecological balance and provides numerous environmental,<br>
+                        social, and economic benefits.</p>
+                </div>
+            </div>
+            <div class="product">
+                <img src="../images/plants/plantcare_img1.jpg" alt="Aloe Vera">
+                <div>
+                    <h3> plant Caring</h3>
+                    <p>Plant care involves providing the necessary conditions for plants to thrive, including adequate<br>
+                        sunlight, water, nutrients, and suitable soil. Regular tasks include watering based on the<br>
+                        plant's needs,</p>
+                </div>
+            </div>
+            <div class="product">
+                <img src="../images/plants/plantcare2.jpg" alt="Tulsi">
+                <div>
+                    <h3> plot Visiting</h3>
+                    <p>Plot visiting involves inspecting a piece of land or property to assess its location, size,<br>
+                        accessibility, and suitability for intended use.</p>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="section">
+            <h2>Plant Care Video Guidance</h2>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/MHnQeCVfSb0?si=GnnL649Y9hA7l80N"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <br><br />
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/Tmz8PPMF6dY?si=qGVZQFbUndYCW3SC"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <br><br />
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/pASNItDOcH0?si=uQNjJ-wxo8nW-C_8"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+        </div>
+
         <div class="section" id="section-0-6">
             <h2>0 to 6 Months Plants</h2>
-            <p>Caring tips for plants that are 0 to 6 months old. Ensure proper watering, avoid direct sunlight, and use light fertilizer.</p>
+            <p>Caring tips for plants that are 0 to 6 months old. Ensure proper watering, avoid direct sunlight, and use
+                light fertilizer.</p>
             <div class="contact-buttons">
-                <a href="tel:+8010333840">Call</a>
-                <a href="https://wa.me/8010333840" target="_blank">WhatsApp</a>
+                <a href="tel:+918010333840">Call</a>
+                <a href="https://wa.me/+918010333840" target="_blank">WhatsApp</a>
             </div>
         </div>
 
         <div class="section" id="section-6-12">
             <h2>6 to 12 Months Plants</h2>
-            <p>Best practices for plants aged 6 to 12 months. Moderate watering, occasional pruning, and monitoring for pests.</p>
+            <p>Best practices for plants aged 6 to 12 months. Moderate watering, occasional pruning, and monitoring for
+                pests.</p>
             <div class="contact-buttons">
-                <a href="tel:+8010333840">Call</a>
-                <a href="https://wa.me/8010333840" target="_blank">WhatsApp</a>
+                <a href="tel:+918010333840">Call</a>
+                <a href="https://wa.me/+918010333840" target="_blank">WhatsApp</a>
             </div>
         </div>
 
         <div class="section" id="section-1-2">
             <h2>1 to 2 Years Plants</h2>
-            <p>Guidance for plants that are 1 to 2 years old. Increased sunlight, regular fertilization, and proper spacing.</p>
+            <p>Guidance for plants that are 1 to 2 years old. Increased sunlight, regular fertilization, and proper
+                spacing.</p>
             <div class="contact-buttons">
-                <a href="tel:+8010333840">Call</a>
+                <a href="tel:+918010333840">Call</a>
                 <a href="https://wa.me/+918010333840" target="_blank">WhatsApp</a>
             </div>
         </div>
 
-        <div class="section" id="products">
-            <h2>Our Products</h2>
-
-            <div class="product">
-                <img src="https://via.placeholder.com/100" alt="Snake Plant">
-                <div>
-                    <h3>Snake Plant - ₹250</h3>
-                    <p>Known for its air-purifying properties, easy maintenance, and aesthetic appeal.</p>
-                </div>
-            </div>
-
-            <div class="product">
-                <img src="https://via.placeholder.com/100" alt="Areca Palm">
-                <div>
-                    <h3>Areca Palm - ₹600</h3>
-                    <p>An indoor favorite that thrives in indirect sunlight and helps improve air quality.</p>
-                </div>
-            </div>
-
-            <div class="product">
-                <img src="https://via.placeholder.com/100" alt="Money Plant">
-                <div>
-                    <h3>Money Plant - ₹200</h3>
-                    <p>Symbolizing prosperity, this plant is great for beginners and needs minimal care.</p>
-                </div>
-            </div>
-
-            <div class="product">
-                <img src="https://via.placeholder.com/100" alt="Ficus Bonsai">
-                <div>
-                    <h3>Ficus Bonsai - ₹1300</h3>
-                    <p>A decorative bonsai tree, perfect for indoor decor with a touch of green luxury.</p>
-                </div>
-            </div>
-
-            <div class="product">
-                <img src="https://via.placeholder.com/100" alt="Aloe Vera">
-                <div>
-                    <h3>Aloe Vera - ₹150</h3>
-                    <p>A versatile medicinal plant known for its healing properties and easy care.</p>
-                </div>
-            </div>
-
-            <div class="product">
-                <img src="https://via.placeholder.com/100" alt="Tulsi">
-                <div>
-                    <h3>Tulsi - ₹100</h3>
-                    <p>Holy Basil, a medicinal herb revered for its therapeutic benefits and spiritual significance.</p>
-                </div>
-            </div>
-
-        </div>
-
-        <div class="section" id="general-care">
-            <h2>General Plant Care Tips</h2>
-            <p>To keep your plants healthy and thriving, consider the following tips:</p>
-            <ul>
-                <li><strong>Watering:</strong> Overwatering can harm roots, while underwatering can dehydrate the plant. Check soil moisture regularly.</li>
-                <li><strong>Sunlight:</strong> Most plants need indirect sunlight. Observe specific requirements of each plant for optimal growth.</li>
-                <li><strong>Fertilizing:</strong> Use the right type of fertilizer based on the plant type and growth stage.</li>
-                <li><strong>Pruning:</strong> Trim dead leaves and branches to promote healthy growth.</li>
-                <li><strong>Repotting:</strong> Repot plants when roots outgrow their containers to ensure they get sufficient space and nutrients.</li>
-            </ul>
-        </div>
     </main>
 
     <footer>
-        <p>&copy; 2024 NatureNest. All rights reserved.</p>
+        <h3>Connect with us</h3>
         <div class="social-icons">
             <a href="https://twitter.com" target="_blank" class="fab fa-twitter" title="Twitter"></a>
             <a href="https://instagram.com" target="_blank" class="fab fa-instagram" title="Instagram"></a>
@@ -209,4 +359,5 @@
         </div>
     </footer>
 </body>
+
 </html>
