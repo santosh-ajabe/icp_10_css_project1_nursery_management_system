@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pots & Planters</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        header h1 {
+            margin: 0;
+            flex-grow: 1;
+            text-align: center;
+        }
+
+        header img {
+            max-height: 50px;
+            margin-right: auto;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 32px auto;
+            padding: 16px;
+            background: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        h1 {
+            text-align: center;
+            color: white;
+            font-size: 35px;
+        }
+
+        .category {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            justify-content: space-between;
+        }
+
+        .card {
+            flex: 1 1 calc(33% - 16px);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+            background: #fff;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card h3 {
+            margin: 16px 0;
+            color: #4CAF50;
+        }
+
+        .card p {
+            padding: 0 16px;
+            color: #666;
+        }
+
+        .card button {
+            display: inline-block;
+            margin: 16px auto;
+            padding: 8px 24px;
+            border: none;
+            border-radius: 4px;
+            background-color: #4CAF50;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .card button:hover {
+            background-color: #45a049;
+            transform: scale(1.05);
+        }
+
+        footer {
+    text-align: center;
+    padding: 5px 10px;
+    background-color: #333;
+    color: white;
+    width: 100%;
+}
+
+footer {
+    font-size: 18px;
+    margin: 5px 0;
+}
+
+footer .social-icons a {
+    color: white;
+    margin: 0 10px;
+    font-size: 20px;
+    text-decoration: none;
+}
+.footer_tag{
+    color: white;
+}
+
+footer .social-icons a:hover {
+    color: red;
+    box-shadow: 0cm;
+}
+footer {
+    background-color: #3a9e67;
+    padding: 20px 0;
+    text-align: center;
+    color: white;
+    margin-top: 40px;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: underline;
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: #ffd700;
+}
+
+
+        .sc {
+            color: #4CAF50;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="./../images/index/logo.jpg" alt="NatureNest Logo">
+        <h1>NATURENEST</h1>
+    </header>
+
+    <div class="container">
+        <h1 class="sc">Pots & Planters</h1>
+        <div class="category">
+            <div class="card">
+                <img src="./../images/pots/plastic.jpeg" alt="Plastic Pots">
+                <h3>Plastic Pots</h3>
+                <p>Durable and lightweight plastic pots in various sizes and designs.</p>
+                <button>Buy Now</button>
+            </div>
+            <div class="card">
+                <img src="./../images/pots/ceramic.webp" alt="Ceramic Pots">
+                <h3>Ceramic Pots</h3>
+                <p>Elegant ceramic pots for indoor and outdoor decor.</p>
+                <button>Buy Now</button>
+            </div>
+            <div class="card">
+                <img src="./../images/pots/hanging.jpg" alt="Hanging Planters">
+                <h3>Hanging Planters</h3>
+                <p>Perfect for small spaces, bringing greenery to your walls.</p>
+                <button>Buy Now</button>
+            </div>
+            <div class="card">
+                <img src="./../images/pots/woodan.webp" alt="Wooden Planters">
+                <h3>Wooden Planters</h3>
+                <p>Eco-friendly and rustic planters made from natural wood.</p>
+                <button>Buy Now</button>
+            </div>
+            <div class="card">
+                <img src="./../images/pots/stand.webp" alt="Plant Stands">
+                <h3>Plant Stands</h3>
+                <p>Stylish stands to organize and display your plants beautifully.</p>
+                <button>Buy Now</button>
+            </div>
+            <div class="card">
+                <img src="./../images/pots/tray.webp" alt="Seedling Trays">
+                <h3>Seedling Trays</h3>
+                <p>Ideal for starting seeds and growing healthy saplings.</p>
+                <button>Buy Now</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <h3 class="footer_tag">Connect with us</h3>
+        <div class="social-icons">
+            <a href="https://twitter.com" target="_blank" class="fab fa-twitter" title="Twitter"></a>
+            <a href="https://instagram.com" target="_blank" class="fab fa-instagram" title="Instagram"></a>
+            <a href="https://wa.me/+918010333840" target="_blank" class="fab fa-whatsapp" title="WhatsApp"></a>
+        </div>
+    </footer>
+</body>
+</html>

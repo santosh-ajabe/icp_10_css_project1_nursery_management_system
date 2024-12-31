@@ -4,8 +4,541 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Page</title>
+    <link rel="stylesheet" href="./../css/contact.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f8f1;
+            color: #333;
+        }
+
+        header {
+            background: linear-gradient(135deg, #3a9e67, #2b7a4b);
+            padding: 20px 30px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            width: 100%;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            transition: background 0.3s ease;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: white;
+            display: flex;
+            align-items: center;
+            text-transform: uppercase;
+            transition: transform 0.3s ease;
+        }
+
+        .logo img {
+            width: 50px;
+            margin-right: 15px;
+        }
+
+        .logo:hover {
+            transform: scale(1.1);
+        }
+
+        .search-bar {
+            display: flex;
+            align-items: center;
+            position: relative;
+            flex: 1;
+            margin-left: 20px;
+        }
+
+        .search-bar input {
+            padding: 15px 20px;
+            font-size: 18px;
+            border-radius: 30px;
+            border: none;
+            outline: none;
+            width: 80%;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: width 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .search-bar input:focus {
+            width: 100%;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .search-bar button {
+            position: absolute;
+            right: 0;
+            padding: 15px 30px;
+            background-color: #4caf50;
+            border: none;
+            border-radius: 30px;
+            color: white;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background 0.3s ease, transform 0.3s ease;
+        }
+
+        .search-bar button:hover {
+            background-color: #388e3c;
+            transform: scale(1.1);
+        }
+
+        .icons {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            margin-left: 20px;
+            margin-right: 0;
+        }
+
+        .icon {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: white;
+            display: flex;
+            align-items: center;
+            text-transform: uppercase;
+            transition: transform 0.3s ease;
+        }
+
+        .icon-img {
+            width: 50px;
+            margin-right: 15px;
+        }
+
+        .icon:hover {
+            transform: scale(1.1);
+        }
+
+        .navbar-nav {
+            display: flex;
+            gap: 25px;
+            align-items: center;
+        }
+
+        .navbar-nav li {
+            position: relative;
+            list-style: none;
+        }
+
+        .navbar-nav a {
+            text-decoration: none;
+            color: white;
+            font-size: 20px;
+            font-weight: 700;
+            padding: 10px 15px;
+            display: block;
+            transition: color 0.3s ease, transform 0.3s ease, background 0.3s ease;
+            border-radius: 5px;
+        }
+
+        .navbar-nav a:hover {
+            color: #4caf50;
+            background-color: rgba(255, 255, 255, 0.2);
+            transform: scale(1.1);
+        }
+
+        .dropdown {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #388e3c;
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .navbar-nav li:hover .dropdown {
+            display: block;
+        }
+
+        .dropdown a {
+            color: white;
+            padding: 10px 20px;
+            font-size: 14px;
+            transition: background 0.3s ease;
+        }
+
+        .dropdown a:hover {
+            background-color: #4caf50;
+        }
+
+        @media screen and (max-width: 768px) {
+            .navbar-nav {
+                display: none;
+                flex-direction: column;
+                background-color: #388e3c;
+                position: absolute;
+                top: 70px;
+                left: 0;
+                width: 100%;
+                padding: 16px 0;
+            }
+
+            .menu-toggle:checked~.navbar-nav {
+                display: flex;
+            }
+
+            .menu-toggle-label {
+                display: flex;
+                cursor: pointer;
+                flex-direction: column;
+            }
+
+            .menu-toggle-label div {
+                width: 25px;
+                height: 3px;
+                background: white;
+                margin: 4px 0;
+            }
+
+            .search-bar {
+                display: flex;
+                margin-top: 20px;
+                width: 100%;
+                justify-content: center;
+            }
+
+            .search-bar input {
+                width: 80%;
+                margin-bottom: 10px;
+            }
+
+            .icons {
+                display: none;
+            }
+        }
+
+        .menu-toggle {
+            display: none;
+        }
+
+        .hero {
+            background-image: url('./../images/index/bg.avif');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 100px 20px;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero h2 {
+            font-size: 4rem;
+            font-weight: 700;
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+
+        .hero button {
+            padding: 12px 30px;
+            background-color: #4caf50;
+            border: none;
+            border-radius: 30px;
+            color: white;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .hero button:hover {
+            background-color: #388e3c;
+        }
+
+        .featured-products {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 50px 20px;
+        }
+
+        .product-card {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .product-card:hover {
+            transform: scale(1.05);
+        }
+
+        .product-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .product-card h3 {
+            font-size: 1.5rem;
+            margin-top: 10px;
+        }
+
+        .product-card p {
+            font-size: 1rem;
+            color: #777;
+            margin: 10px 0;
+        }
+
+        .product-card button {
+            padding: 10px 20px;
+            background-color: #4caf50;
+            border: none;
+            border-radius: 30px;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .product-card button:hover {
+            background-color: #388e3c;
+        }
+        .form-container{
+    background-color: rgb(216, 195, 170);
+    height: 500px;
+    width: 800px;
+    margin: 0 auto;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: auto;
+}
+.input-typeset{
+  
+  height: 450px;
+  width: 430px;
+  display: block;
+  margin-left: 30px;
+  margin-top: 20px;
+}
+footer {
+    text-align: center;
+    padding: 5px 10px;
+    background-color: #333;
+    color: white;
+    width: 100%;
+}
+
+footer {
+    font-size: 18px;
+    margin: 5px 0;
+}
+
+footer .social-icons a {
+    color: white;
+    margin: 0 10px;
+    font-size: 20px;
+    text-decoration: none;
+}
+.footer_tag{
+    color: white;
+}
+
+footer .social-icons a:hover {
+    color: red;
+    box-shadow: 0cm;
+}
+footer {
+    background-color: #3a9e67;
+    padding: 20px 0;
+    text-align: center;
+    color: white;
+    margin-top: 40px;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: underline;
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: #ffd700;
+}
+
+    </style>
 </head>
 <body>
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <img src="./../images/index/logo.jpg" alt="NatureNest Logo"> NatureNest
+            </div>
+            <div class="search-bar">
+                <input type="text" placeholder="Search products...">
+                <button>Search</button>
+            </div>
+
+            <div class="icons">
+                <a href="./pages/login.html">
+                    <img src="./../icons/user.png" class="icon icon-img">
+                </a>
+                <a href="./pages/cart.html">
+                    <img src="./../icons/cart.png" class="icon icon-img">
+                </a>
+            </div>
+
+            <input type="checkbox" class="menu-toggle" id="menu-toggle">
+            <label for="menu-toggle" class="menu-toggle-label">
+                <div></div>
+                <div></div>
+                <div></div>
+            </label>
+
+            <ul class="navbar-nav">
+                <li><a href="./plants.html">Plants</a>
+                    <div class="dropdown">
+                        <a href="./indoor.html">Indoor Plants</a>
+                        <a href="./plantcare.html">Pet Friendly Plants</a>
+                        <a href="./flower.html">Flowering Plants</a>
+                        <a href="./fruit.html">Fruit Plants</a>
+                        <a href="./medicinal.html">Medicinal Plants</a>
+                    </div>
+                </li>
+                <li><a href="./seeds.html">Seeds</a>
+                    <div class="dropdown">
+                        <a href="#">Flower Seeds</a>
+                        <a href="#">Vegetable Seeds</a>
+                        <a href="#">Flower Bulbs</a>
+                        <a href="#">Fruit Seeds</a>
+                        <a href="#">Herbs Seeds</a>
+                    </div>
+                </li>
+                <li><a href="./pots_n_planters.html">Pots & Planters</a>
+                    <div class="dropdown">
+                        <a href="#">Plastic Pots</a>
+                        <a href="#">Ceramic Pots</a>
+                        <a href="#">Hanging Planters</a>
+                        <a href="#">Wooden Planters</a>
+                        <a href="#">Plant Stands</a>
+                        <a href="#">Seedling Trays</a>
+                    </div>
+                </li>
+                <li><a href="./plantcare.html">Plant Care</a>
+                    <div class="dropdown">
+                        <a href="#">Potting Mix</a>
+                        <a href="#">Cocopeat</a>
+                        <a href="#">Urea</a>
+                        <a href="#">Fungicide</a>
+                        <a href="#">Gardening Tools</a>
+                    </div>
+                </li>
+                <li><a href="./gifts.html">Gifts</a></li>
+                <li><a href="./blogs.html">Blogs</a></li>
+                <li><a href="./about.html">About Us</a></li>
+                <li><a href="./contact.html">Contact Us</a></li>
+            </ul>
+        </div>
+    </header>
+
+   <img src="./../images/contact-img/Screenshot (140).png" alt="contact-us-img" height="300px" width="100%" >
+     <br>
+     <br> 
+  <div class="enquiry-container">
+    <div class="typeset-container">
+
+
+        <div class="typeset">
+            <div class="image-container">
+                <img src="./../images/contact-img/gmail.png" alt="mail-icon" class="icon-enquiry">
+            </div>
+            <div class="enquiry-text font-family">
+                <p> <a href="mail to: naturenest01@gmail.com">naturenest01@gmail.com</a> </p>
+            </div>
+        </div>
     
+
+        <div class="typeset">
+            <div class="image-container">
+                <img src="./../images/contact-img/gmail.png" alt="mail-icon" class="icon-enquiry">
+            </div>
+            <div class="enquiry-text font-family">
+                <p> <a href="mail to: naturenest@gmail.com">naturenest@gmail.com</a> </p>
+            </div>
+        </div>
+
+        <div class="typeset">
+            <div class="image-container">
+                <img src="./../images/contact-img/mobile.png" alt="phone-icon" class="icon-enquiry1">
+            </div>
+            <div class="enquiry-text font-family">
+                <p> <a href="tel:+91 8765432198"> +91 8765432198</a> </p>
+            </div>
+        </div>
+
+        <div class="typeset">
+            <div class="image-container">
+                <img src="./../images/contact-img/whatsapp.png" alt="whatsapp-cion" class="icon-enquiry1">
+            </div>
+            <div class="enquiry-text font-family">
+                 <p> <a href="tel:+91 7086544536"> +91 7086544536</a> </p>
+            </div>
+        </div>
+
+        <div class="typeset">
+            <div class="image-container">
+                <img src="./../images/contact-img/mobile.png" alt="phone-icon" class="icon-enquiry1">
+            </div>
+            <div class="enquiry-text font-family">
+                 <p> <a href="tel:+91 9876543216"> +91 9876543216</a> </p>
+            </div>
+        </div>
+
+        <div class="typeset">
+            <div class="image-container">
+                <img src="./../images/contact-img/google-maps.png" alt="location-icon" class="icon-enquiry">
+            </div>
+            <div class="enquiry-text font-family">
+                <p> <a href="https://maps.app.goo.gl/GT79GNT29DYMD2A58">G09,Andheri wast,New Mumbai 421029.</p>
+            </div>
+        </div>
+
+
+    </div>
+
+    <div class="input-typeset">
+         <input type="text" placeholder="Name" class="name font-family">
+         <input type="text" placeholder="Subject" class="name font-family">
+         <input type="email" placeholder="Email" class="name font-family">
+         <input type="text" placeholder="Message" class="message font-family">
+         <button class="submit-btn font-family">Submit</button>
+    </div>
+
+</div>
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30154.34103788736!2d72.80480730823189!3d19.138663853019814!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b618b6d891dd%3A0x91f8a857c731d132!2sAndheri%20West%2C%20Mumbai%2C%20Maharashtra%20400047!5e0!3m2!1sen!2sin!4v1735298586308!5m2!1sen!2sin" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> 
+
+<footer>
+    <h3 class="footer_tag">Connect with us</h3>
+    <div class="social-icons">
+        <a href="https://twitter.com" target="_blank" class="fab fa-twitter" title="Twitter"></a>
+        <a href="https://instagram.com" target="_blank" class="fab fa-instagram" title="Instagram"></a>
+        <a href="https://wa.me/+918010333840" target="_blank" class="fab fa-whatsapp" title="WhatsApp"></a>
+    </div>
+</footer>
+
 </body>
+
 </html>

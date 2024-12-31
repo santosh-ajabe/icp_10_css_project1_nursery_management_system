@@ -1,4 +1,56 @@
-/* General Styles */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.payment-container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.submit-button {
+    width: 100%;
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.submit-button:hover {
+    background-color: #218838;
+}
+
+
 body, ul, li, a, input, button {
     margin: 0;
     padding: 0;
@@ -12,7 +64,6 @@ body {
     background-color: #f4f4f4;
 }
 
-/* Header Section */
 header {
     background-color: #4e0505;
     border-bottom: 1px solid #ddd;
@@ -61,6 +112,7 @@ header {
 .search-bar input:focus {
     outline: none;
 }
+
 
 .search-button {
     background-color: #16a085;
@@ -167,7 +219,7 @@ header {
     text-decoration: none;
 }
 
-/* Hero Section */
+
 .div1 {
     display: flex;
     justify-content: center;
@@ -232,9 +284,8 @@ header {
 
 .shop-now:hover {
     background-color: #cc7a00;
-}
-
-/* Explore Section */
+  }
+  
 .explore-section {
     padding: 40px 20px;
     background-color: #ffffff;
@@ -289,3 +340,4 @@ header {
 .flower{
     height: 20px;
 }
+
