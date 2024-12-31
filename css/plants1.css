@@ -13,6 +13,11 @@
     padding: 20px;
     border: solid  rgb(206, 194, 194); 
    }
+   .container:hover{
+    border: none;
+    box-shadow: 0 0 4px 2px gray;
+    transition: 1s;
+}
     .heading1{
       text-align: center;
     }
@@ -54,16 +59,13 @@
       height: 70px;
       width: 50px;
       justify-items: center;
-      margin: 20px;
-      margin-bottom: 0px;
-      padding:0 700px;
+     margin:0px 40px;
+    
     }
     .back{
-      margin: 20px;
-      margin-top: 0px;
-      text-align: center;
-      padding:0 700px;
-      color: green;
+      text-align: left;
+     color: green;
+     margin: 0px 40px;
       
     }
 
@@ -93,6 +95,6 @@
             gap: 20px;
         }
 
-       
-
+      
+    
 
