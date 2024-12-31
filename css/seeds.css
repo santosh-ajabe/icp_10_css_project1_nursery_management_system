@@ -1,0 +1,115 @@
+.titlee{
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: 500;
+    text-align: center;
+    color: #1a5d1e;
+    font-size: 41px;
+    margin-top: 20px;
+    margin-left: 30px;
+    margin-bottom: 30px;
+}
+.type-containers{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    text-align:center;
+ }
+
+.type5{
+    width: 280px;
+    border-style: solid;
+    border-color: #333;
+    border-width: 2px;
+    margin: 5px;
+    border-radius: 10px;
+}
+.type2{
+    height: 310px; 
+    width: 264px;
+}
+
+.names{
+    text-align: center;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: 25px;
+    font-weight: 800;
+    color: #1a5d1e;
+}
+.addition{
+    font-size: 20px;
+    color: #1a5d1e;
+}
+
+.type5:hover{
+    border: none;
+    box-shadow: 0 0 8px 6px gray;
+    transition: 0.5;
+}
+.rupees{
+    color: black;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    font-size: 23px;
+    margin-bottom: 5px;
+}
+.buy-button{
+    color:black;
+    background-color: #4caf50;
+    font-size: 22px;
+    border-radius: 10px;
+    padding: 10px;
+    font-weight: 700;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+.buy-button:hover{
+    border: none;
+    box-shadow: 0 0 8px 6px gray;
+    background-color: aliceblue;
+    transition: 0.5;
+}
+.back-button{
+    height: 50px;
+    width: 130px;
+    position: fixed;
+    top: 20px;
+    right: 60px;
+    color: black;
+    background-color: #75d378;
+    font-size:28px;
+    border-radius: 9px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+   font-weight: 600;
+    border-color: #333;
+    border-width: 3px;
+}
+.back-button:hover{
+    border: none;
+    box-shadow: 0 0 8px 6px gray;
+    background-color: aliceblue;
+    transition: 0.5;
+}
+.home-button{
+    height: 50px;
+    width: 130px;
+    position: fixed;
+    top: 20px;
+    left: 60px;
+    color: black;
+    background-color: #4caf50;
+    font-size:28px;
+    border-radius: 9px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    
+    border-color: #333;
+    border-width: 3px;
+    font-weight: 600;
+}
+.home-button:hover{
+    border: none;
+    box-shadow: 0 0 8px 6px gray;
+    background-color: aliceblue;
+    transition: 0.5;
+}
+
