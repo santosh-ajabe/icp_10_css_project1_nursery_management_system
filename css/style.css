@@ -1,4 +1,4 @@
-.{
+body {
   font-family: Georgia, 'Times New Roman', Times, serif;
 }
 body{
@@ -85,4 +85,49 @@ i{
 label a{
   color: #fff;
   text-decoration: none;
+}
+footer {
+  text-align: center;
+  padding: 5px 10px;
+  background-color: #333;
+  color: white;
+  width: 100%;
+}
+
+footer {
+  font-size: 18px;
+  margin: 5px 0;
+}
+
+footer .social-icons a {
+  color: white;
+  margin: 0 10px;
+  font-size: 20px;
+  text-decoration: none;
+}
+.footer_tag{
+  color: white;
+}
+
+footer .social-icons a:hover {
+  color: red;
+  box-shadow: 0cm;
+}
+footer {
+  background-color: #3a9e67;
+  padding: 20px 0;
+  text-align: center;
+  color: white;
+  margin-top: 40px;
+}
+
+footer a {
+  color: #fff;
+  text-decoration: underline;
+  margin: 0 10px;
+  transition: color 0.3s;
+}
+
+footer a:hover {
+  color: #ffd700;
 }

@@ -230,29 +230,51 @@
             display: none;
         }
         footer {
-            background-color: #2b7a4b;
-            color: white;
-            padding: 20px 0;
-            text-align: center;
-        }
+    text-align: center;
+    padding: 5px 10px;
+    background-color: #333;
+    color: white;
+    width: 100%;
+}
 
-        footer a {
-            color: white;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
+footer {
+    font-size: 18px;
+    margin: 5px 0;
+}
 
-        footer a:hover {
-            color: #ff6f61;
-        }
+footer .social-icons a {
+    color: white;
+    margin: 0 10px;
+    font-size: 20px;
+    text-decoration: none;
+}
+.footer_tag{
+    color: white;
+}
 
-        footer ul {
-            list-style: none;
-            padding: 10px;
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-        }
+footer .social-icons a:hover {
+    color: red;
+    box-shadow: 0cm;
+}
+footer {
+    background-color: #3a9e67;
+    padding: 20px 0;
+    text-align: center;
+    color: white;
+    margin-top: 40px;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: underline;
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: #ffd700;
+}
+
   </style>
 </head>
 <body>
@@ -420,8 +442,12 @@
     </section>
   </main>
   <footer>
-    <p>&copy; 2024 NatureNest. All Rights Reserved.</p>
-    <p>Follow Us: <a href="#">Facebook</a> | <a href="#">Instagram</a> | <a href="#">Twitter</a></p>
+    <h3 class="footer_tag">Connect with us</h3>
+    <div class="social-icons">
+        <a href="https://twitter.com" target="_blank" class="fab fa-twitter" title="Twitter"></a>
+        <a href="https://instagram.com" target="_blank" class="fab fa-instagram" title="Instagram"></a>
+        <a href="https://wa.me/+918010333840" target="_blank" class="fab fa-whatsapp" title="WhatsApp"></a>
+    </div>
 </footer>
 </body>
 </html>

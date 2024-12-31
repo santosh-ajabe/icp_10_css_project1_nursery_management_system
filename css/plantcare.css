@@ -68,7 +68,33 @@ h1 {
     line-height: 1.6;
 }
 
+footer {
+    text-align: center;
+    padding: 5px 10px;
+    background-color: #333;
+    color: white;
+    width: 100%;
+}
 
+footer {
+    font-size: 18px;
+    margin: 5px 0;
+}
+
+footer .social-icons a {
+    color: white;
+    margin: 0 10px;
+    font-size: 20px;
+    text-decoration: none;
+}
+.footer_tag{
+    color: white;
+}
+
+footer .social-icons a:hover {
+    color: red;
+    box-shadow: 0cm;
+}
 footer {
     background-color: #3a9e67;
     padding: 20px 0;
@@ -160,31 +186,4 @@ footer a:hover {
     background-color: #1ebc54;
     color: #fff;
     box-shadow: 0 8px 12px rgba(30, 188, 84, 0.3);
-}
-footer {
-    text-align: center;
-    padding: 5px 10px;
-    background-color: #333;
-    color: white;
-    width: 100%;
-}
-
-footer {
-    font-size: 18px;
-    margin: 5px 0;
-}
-
-footer .social-icons a {
-    color: white;
-    margin: 0 10px;
-    font-size: 20px;
-    text-decoration: none;
-}
-.footer_tag{
-    color: white;
-}
-
-footer .social-icons a:hover {
-    color: red;
-    box-shadow: 0cm;
 }
