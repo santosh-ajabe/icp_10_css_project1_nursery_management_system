@@ -34,6 +34,7 @@
     font-size: 25px;
     font-weight: 800;
     color: #1a5d1e;
+    margin-bottom: 4px;
 }
 .addition{
     font-size: 20px;
@@ -50,7 +51,7 @@
     font-family:Georgia, 'Times New Roman', Times, serif;
     text-align: center;
     font-size: 23px;
-    margin-bottom: 5px;
+    margin-bottom: 3px;
 }
 .buy-button{
     color:black;
@@ -73,7 +74,7 @@
     height: 50px;
     width: 130px;
     position: fixed;
-    top: 20px;
+    top: 25px;
     right: 60px;
     color: black;
     background-color: #75d378;
@@ -94,7 +95,7 @@
     height: 50px;
     width: 130px;
     position: fixed;
-    top: 20px;
+    top: 25px;
     left: 60px;
     color: black;
     background-color: #75d378;
@@ -130,15 +131,17 @@
 }
 
 .footer .social-icons a {
-    color: white;
+    color: rgb(15, 2, 2);
     margin: 0 10px;
     font-size: 20px;
     text-decoration: none;
 }
 .footer_tag{
-    color:white;
+    color:rgb(12, 2, 2);
     text-align: center;
-    background-color:white;
+    background-color:white; 
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-bottom: 5px;
 }
 
 .footer .social-icons a:hover {
