@@ -184,51 +184,7 @@ header {
 .menu-toggle {
     display: none;
 }
-@media screen and (max-width: 768px) {
-            .navbar-nav {
-                display: none;
-                flex-direction: column;
-                background-color: #388e3c;
-                position: absolute;
-                top: 70px;
-                left: 0;
-                width: 100%;
-                padding: 16px 0;
-            }
 
-            .menu-toggle:checked~.navbar-nav {
-                display: flex;
-            }
-
-            .menu-toggle-label {
-                display: flex;
-                cursor: pointer;
-                flex-direction: column;
-            }
-
-            .menu-toggle-label div {
-                width: 25px;
-                height: 3px;
-                background: white;
-                margin: 4px 0;
-            }
-
-            .search-bar {
-                display: flex;
-                margin-top: 20px;
-                width: 100%;
-                justify-content: center;
-            }
-
-            .search-bar input {
-                width: 80%;
-                margin-bottom: 10px;
-            }
-
-            .icons {
-                display: none;
-            }
-        }
   </style>
 </head>
 <body>
