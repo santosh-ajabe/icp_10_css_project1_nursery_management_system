@@ -34,6 +34,7 @@
     font-size: 25px;
     font-weight: 800;
     color: #1a5d1e;
+    margin-bottom: 4px;
 }
 .addition{
     font-size: 20px;
@@ -50,7 +51,7 @@
     font-family:Georgia, 'Times New Roman', Times, serif;
     text-align: center;
     font-size: 23px;
-    margin-bottom: 5px;
+    margin-bottom: 3px;
 }
 .buy-button{
     color:black;
@@ -73,7 +74,7 @@
     height: 50px;
     width: 130px;
     position: fixed;
-    top: 20px;
+    top: 25px;
     right: 60px;
     color: black;
     background-color: #75d378;
@@ -94,10 +95,10 @@
     height: 50px;
     width: 130px;
     position: fixed;
-    top: 20px;
+    top: 25px;
     left: 60px;
     color: black;
-    background-color: #4caf50;
+    background-color: #75d378;
     font-size:28px;
     border-radius: 9px;
     font-family:Georgia, 'Times New Roman', Times, serif;
@@ -112,4 +113,79 @@
     background-color: aliceblue;
     transition: 0.5;
 }
+.iconn{
+    border-radius: 40px;
+    height: 20px;
+}
+.footer {
+    text-align: center;
+    padding: 5px 10px;
+    background-color: #333;
+    color: white;
+    width: 100%;
+}
+
+.footer {
+    font-size: 18px;
+    margin-top: 0px;
+}
+
+.footer .social-icons a {
+    color: rgb(15, 2, 2);
+    margin: 0 10px;
+    font-size: 20px;
+    text-decoration: none;
+}
+.footer_tag{
+    color:rgb(12, 2, 2);
+    text-align: center;
+    background-color:white; 
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-bottom: 5px;
+}
+
+.footer .social-icons a:hover {
+    color: red;
+    box-shadow: 0cm;
+}
+.footer {
+    background-color: #3a9e67;
+    padding: 20px 0;
+    text-align: center;
+    color: white;
+    margin-top: 40px;
+}
+
+.footer a {
+    color: #fff;
+    text-decoration: underline;
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: #ffd700;
+}
+.social-icons{
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 40px;
+}
+.iconn{
+    height: 47px;
+    border-radius: 100px;
+    margin-top: 10px;
+    margin-left: 6px;
+    margin-right: 6px;
+    
+}
+.iconn:hover{
+    border: none;
+    box-shadow: 0 0 8px 6px gray;
+    background-color: aliceblue;
+    transition: 0.5;
+    height: 70px;
+ 
+}
+
 
