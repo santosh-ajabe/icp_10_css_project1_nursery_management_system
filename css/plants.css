@@ -282,15 +282,16 @@ header {
 
 footer {
     text-align: center;
-    padding: 5px 10px;
-    background-color: #333;
+    padding: 10px ;
+    background-color:black;
     color: white;
     width: 100%;
+    margin-top: 0;
 }
 
 footer {
     font-size: 18px;
-    margin: 5px 0;
+   
 }
 
 footer .social-icons a {
@@ -303,26 +304,26 @@ footer .social-icons a {
     color: white;
 }
 
-footer .social-icons a:hover {
+.footer .social-icons a:hover {
     color: red;
     box-shadow: 0cm;
 }
-footer {
+.footer{
     background-color: #3a9e67;
     padding: 20px 0;
     text-align: center;
     color: white;
-    margin-top: 40px;
+    
 }
 
-footer a {
+.footer a {
     color: #fff;
     text-decoration: underline;
     margin: 0 10px;
     transition: color 0.3s;
 }
 
-footer a:hover {
+.footer a:hover {
     color: #ffd700;
 }
 
