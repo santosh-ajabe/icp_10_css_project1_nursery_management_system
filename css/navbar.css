@@ -13,8 +13,9 @@ body {
 header {
     background: linear-gradient(135deg, #3a9e67, #2b7a4b);
     padding: 20px 30px;
+    position: sticky;
     top: 0;
-    position: fixed;
+    z-index: 1000;
     width: 100%;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
     transition: background 0.3s ease;
@@ -26,9 +27,7 @@ header {
     align-items: center;
     flex-wrap: wrap;
     max-width: 1200px;
-    height: 70px;
-    position: sticky;
-    top:0;
+    margin: 0 auto;
 }
 
 .logo {
@@ -142,7 +141,7 @@ header {
 }
 
 .navbar-nav a:hover {
-    color: #4caf50;
+    color: #f7f9f7;
     background-color: rgba(255, 255, 255, 0.2);
     transform: scale(1.1);
 }
@@ -161,7 +160,7 @@ header {
 .navbar-nav li:hover .dropdown {
     display: block;
 }
- 
+
 .dropdown a {
     color: white;
     padding: 10px 20px;
@@ -169,14 +168,15 @@ header {
     transition: background 0.3s ease;
 }
 
-
 .dropdown a:hover {
     background-color: #4caf50;
 }
 
 .menu-toggle {
-    display: none;
+    display: none;
 }
+
+
 @media screen and (max-width: 768px) {
     .navbar-nav {
         display: none;
@@ -220,5 +220,32 @@ header {
 
     .icons {
         display: none;
-     }
-        
+    }
+}
+footer {
+text-align: center;
+padding: 5px 10px;
+background-color: #333;
+color: white;
+width: 100%;
+}
+
+footer {
+font-size: 18px;
+margin: 5px 0;
+}
+
+footer .social-icons a {
+color: white;
+margin: 0 10px;
+font-size: 20px;
+text-decoration: none;
+}
+.footer_tag{
+color: white;
+}
+
+footer .social-icons a:hover {
+color: red;
+box-shadow: 0cm;
+}

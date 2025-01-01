@@ -96,24 +96,6 @@
       color: red;
       box-shadow: 0cm;
   }
-  footer {
-      background-color: #3a9e67;
-      padding: 20px 0;
-      text-align: center;
-      color: white;
-      margin-top: 40px;
-  }
-  
-  footer a {
-      color: #fff;
-      text-decoration: underline;
-      margin: 0 10px;
-      transition: color 0.3s;
-  }
-  
-  footer a:hover {
-      color: #ffd700;
-  }
   
 
       

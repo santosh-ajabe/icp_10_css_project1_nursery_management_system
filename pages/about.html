@@ -3,189 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About Us - Green Thumb Nursery</title>
+  <title>About Us</title>
   <link rel="stylesheet" href="./../css/about.css">
-  <style>
-    * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f0f8f1;
-    color: #333;
-}
-
-header {
-    background: linear-gradient(135deg, #3a9e67, #2b7a4b);
-    padding: 20px 30px;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    width: 100%;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-    transition: background 0.3s ease;
-}
-
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.logo {
-    font-size: 2.5rem;
-    font-weight: bold;
-    color: white;
-    display: flex;
-    align-items: center;
-    text-transform: uppercase;
-    transition: transform 0.3s ease;
-}
-
-.logo img {
-    width: 50px;
-    margin-right: 15px;
-}
-
-.logo:hover {
-    transform: scale(1.1);
-}
-
-.search-bar {
-    display: flex;
-    align-items: center;
-    position: relative;
-    flex: 1;
-    margin-left: 20px;
-}
-
-.search-bar input {
-    padding: 15px 20px;
-    font-size: 18px;
-    border-radius: 30px;
-    border: none;
-    outline: none;
-    width: 80%;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    transition: width 0.3s ease, box-shadow 0.3s ease;
-}
-
-.search-bar input:focus {
-    width: 100%;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-}
-
-.search-bar button {
-    position: absolute;
-    right: 0;
-    padding: 15px 30px;
-    background-color: #4caf50;
-    border: none;
-    border-radius: 30px;
-    color: white;
-    font-size: 18px;
-    cursor: pointer;
-    transition: background 0.3s ease, transform 0.3s ease;
-}
-
-.search-bar button:hover {
-    background-color: #388e3c;
-    transform: scale(1.1);
-}
-
-.icons {
-    display: flex;
-    gap: 20px;
-    align-items: center;
-    margin-left: 20px;
-    margin-right: 0;
-}
-
-.icon {
-    font-size: 2.5rem;
-    font-weight: bold;
-    color: white;
-    display: flex;
-    align-items: center;
-    text-transform: uppercase;
-    transition: transform 0.3s ease;
-}
-
-.icon-img {
-    width: 50px;
-    margin-right: 15px;
-}
-
-.icon:hover {
-    transform: scale(1.1);
-}
-
-.navbar-nav {
-    display: flex;
-    gap: 25px;
-    align-items: center;
-}
-
-.navbar-nav li {
-    position: relative;
-    list-style: none;
-}
-
-.navbar-nav a {
-    text-decoration: none;
-    color: white;
-    font-size: 20px;
-    font-weight: 700;
-    padding: 10px 15px;
-    display: block;
-    transition: color 0.3s ease, transform 0.3s ease, background 0.3s ease;
-    border-radius: 5px;
-}
-
-.navbar-nav a:hover {
-    color: #4caf50;
-    background-color: rgba(255, 255, 255, 0.2);
-    transform: scale(1.1);
-}
-
-.dropdown {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: #388e3c;
-    padding: 10px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.navbar-nav li:hover .dropdown {
-    display: block;
-}
-
-.dropdown a {
-    color: white;
-    padding: 10px 20px;
-    font-size: 14px;
-    transition: background 0.3s ease;
-}
-
-
-.dropdown a:hover {
-    background-color: #4caf50;
-}
-
-.menu-toggle {
-    display: none;
-}
-
-  </style>
+  <link rel="stylesheet" href="./../css/navbar.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <header>
@@ -199,10 +20,10 @@ header {
             </div>
 
             <div class="icons">
-                <a href="./pages/login.html">
+                <a href="./../pages/login.html">
                     <img src="./../icons/user.png" class="icon icon-img">
                 </a>
-                <a href="./pages/cart.html">
+                <a href="./../pages/cart.html">
                     <img src="./../icons/cart.png" class="icon icon-img">
                 </a>
             </div>
@@ -215,58 +36,48 @@ header {
             </label>
 
             <ul class="navbar-nav">
-                <li><a href="./pages/plants.html">Plants</a>
+                <li><a href="./../pages/plants.html">Plants</a>
                     <div class="dropdown">
-                        <a href="#">Indoor Plants</a>
-                        <a href="#">Flowering Plants</a>
-                        <a href="#">Fruit Plants</a>
-                        <a href="#">Medicinal Plants</a>
+                        <a href="./../pages/indoor.html">Indoor Plants</a>
+                        <a href="./../pages/flower.html">Flowering Plants</a>
+                        <a href="./../pages/fruit.html">Fruit Plants</a>
+                        <a href="./../pages/medicinal.html">Medicinal Plants</a>
                     </div>
                 </li>
-                <li><a href="./pages/seeds.html">Seeds</a>
+                <li><a href="./../pages/seeds.html">Seeds</a>
                     <div class="dropdown">
-                        <a href="#">Flower Seeds</a>
-                        <a href="#">Vegetable Seeds</a>
-                        <a href="#">Flower Bulbs</a>
-                        <a href="#">Fruit Seeds</a>
-                        <a href="#">Herbs Seeds</a>
+                        <a href="./../pages/flowerseed.html">Flower Seeds</a>
+                        <a href="./../pages/vegetable.html">Vegetable Seeds</a>
+                        <a href="./../pages/bulb.html">Flower Bulbs</a>
+                        <a href="./../pages/fruitseed.html">Fruit Seeds</a>
+                        <a href="./../pages/herbseed.html">Herbs Seeds</a>
                     </div>
                 </li>
-                <li><a href="./pages/pots_n_planters.html">Pots & Planters</a>
+                <li><a href="./../pages/pots_n_planters.html">Pots & Planters</a>
+                </li>
+                <li><a href="./../pages/plantcare.html">Plant Care</a>
                     <div class="dropdown">
-                        <a href="#">Plastic Pots</a>
-                        <a href="#">Ceramic Pots</a>
-                        <a href="#">Hanging Planters</a>
-                        <a href="#">Wooden Planters</a>
-                        <a href="#">Plant Stands</a>
-                        <a href="#">Seedling Trays</a>
+                        <a href="./../pages/fertilizer.html"> Fertilizer And Potting Mix</a>
+                        <a href="./../pages/garden.html">Gardening Tools</a>
+                        <a href="./../pages/accesories.html">Our Accesories</a>
+                       
                     </div>
                 </li>
-                <li><a href="./pages/plantcare.html">Plant Care</a>
-                    <div class="dropdown">
-                        <a href="#">Potting Mix</a>
-                        <a href="#">Cocopeat</a>
-                        <a href="#">Urea</a>
-                        <a href="#">Fungicide</a>
-                        <a href="#">Gardening Tools</a>
-                    </div>
-                </li>
-                <li><a href="./pages/gifts.html">Gifts</a></li>
-                <li><a href="./pages/blogs.html">Blogs</a></li>
-                <li><a href="./pages/about.html">About Us</a></li>
-                <li><a href="./pages/contact.html">Contact Us</a></li>
+                <li><a href="./../pages/gifts.html">Gifts</a></li>
+                <li><a href="./../pages/blogs.html">Blogs</a></li>
+                <li><a href="./../pages/about.html">About Us</a></li>
+                <li><a href="./../pages/contact.html">Contact Us</a></li>
             </ul>
         </div>
     </header>
 
   <CENTER>
-  <H1> HI ERVRYONE ..........🙌😌</H1>
+  <H1> HI EVERYONE ..........🙌😌</H1>
   </CENTER>
 
 <center>
   <main>
     <section class="about-us">
-       <br>
        <p><b><li>Welcome to NatureNest , your one-stop online shop for all your gardening needs.&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;
        <p> We're a team of passionate gardeners dedicated to providing top-quality plants, gardening supplies, and expert advice to help you create your dream garden.</p></p></b></li>
        </center>                                
@@ -355,10 +166,10 @@ header {
     <section class="team">
       <h2>......Meet the Team......</h2>
       <ul type="circle">
-        <h3><li>HOME GRAD:-     Unde anushka</h3></li>
-       <h3><li>NSTRUCTOR:-      Santosh ajabe</h3></li>
-        <h3><li>NSTRUCTOR:-     Pranali</h3></li>
-  <h3><li>ALL INFORMATION:-     Mandar kadam</h3></li>
+        <h3><li>HOME GRAD:-     Unde Anushka</h3></li>
+       <h3><li>NSTRUCTOR:-      Santosh Ajabe</h3></li>
+        <h3><li>NSTRUCTOR:-     Pranali Salunkhe</h3></li>
+  <h3><li>ALL INFORMATION:-     Mandar Kadam</h3></li>
             <h3><li>LOGIN:-     Shivani Ekshinge.</h3></li>
         <h3><li>NSTRUCTOR:-     Namrata magar</h3></li>
         <h3><li>NSTRUCTOR:-     Vaishnavi kshirsagar</h3></li>

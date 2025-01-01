@@ -341,3 +341,25 @@ header {
     height: 20px;
 }
 
+.home-button{
+    height: 50px;
+    width: 130px;
+    position: fixed;
+    top: 25px;
+    left: 60px;
+    color: black;
+    background-color: #75d378;
+    font-size:28px;
+    border-radius: 9px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    
+    border-color: #333;
+    border-width: 3px;
+    font-weight: 600;
+}
+.home-button:hover{
+    border: none;
+    box-shadow: 0 0 8px 6px gray;
+    background-color: aliceblue;
+    transition: 0.5;
+}

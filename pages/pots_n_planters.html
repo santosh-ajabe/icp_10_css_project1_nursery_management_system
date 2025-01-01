@@ -4,162 +4,72 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pots & Planters</title>
-    <link rel="stylesheet" href="styles.css">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
-
-        header {
-            background-color: #4CAF50;
-            color: white;
-            padding: 16px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-
-        header h1 {
-            margin: 0;
-            flex-grow: 1;
-            text-align: center;
-        }
-
-        header img {
-            max-height: 50px;
-            margin-right: auto;
-        }
-
-        .container {
-            max-width: 1100px;
-            margin: 32px auto;
-            padding: 16px;
-            background: white;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-        }
-
-        h1 {
-            text-align: center;
-            color: white;
-            font-size: 35px;
-        }
-
-        .category {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 16px;
-            justify-content: space-between;
-        }
-
-        .card {
-            flex: 1 1 calc(33% - 16px);
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-            overflow: hidden;
-            background: #fff;
-            text-align: center;
-            transition: transform 0.3s ease;
-        }
-
-        .card:hover {
-            transform: translateY(-5px);
-        }
-
-        .card img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-        }
-
-        .card h3 {
-            margin: 16px 0;
-            color: #4CAF50;
-        }
-
-        .card p {
-            padding: 0 16px;
-            color: #666;
-        }
-
-        .card button {
-            display: inline-block;
-            margin: 16px auto;
-            padding: 8px 24px;
-            border: none;
-            border-radius: 4px;
-            background-color: #4CAF50;
-            color: white;
-            font-size: 16px;
-            cursor: pointer;
-            transition: background-color 0.3s ease, transform 0.2s ease;
-        }
-
-        .card button:hover {
-            background-color: #45a049;
-            transform: scale(1.05);
-        }
-
-        footer {
-    text-align: center;
-    padding: 5px 10px;
-    background-color: #333;
-    color: white;
-    width: 100%;
-}
-
-footer {
-    font-size: 18px;
-    margin: 5px 0;
-}
-
-footer .social-icons a {
-    color: white;
-    margin: 0 10px;
-    font-size: 20px;
-    text-decoration: none;
-}
-.footer_tag{
-    color: white;
-}
-
-footer .social-icons a:hover {
-    color: red;
-    box-shadow: 0cm;
-}
-footer {
-    background-color: #3a9e67;
-    padding: 20px 0;
-    text-align: center;
-    color: white;
-    margin-top: 40px;
-}
-
-footer a {
-    color: #fff;
-    text-decoration: underline;
-    margin: 0 10px;
-    transition: color 0.3s;
-}
-
-footer a:hover {
-    color: #ffd700;
-}
-
-
-        .sc {
-            color: #4CAF50;
-        }
-    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="./../css/navbar.css">
+    <link rel="stylesheet" href="./../css/pots_n_planters.css">
 </head>
 <body>
     <header>
-        <img src="./../images/index/logo.jpg" alt="NatureNest Logo">
-        <h1>NATURENEST</h1>
-    </header>
+        <div class="navbar">
+            <div class="logo">
+                <img src="./../images/index/logo.jpg" alt="NatureNest Logo"> NatureNest
+            </div>
+            <div class="search-bar">
+                <input type="text" placeholder="Search products...">
+                <button>Search</button>
+            </div>
+
+            <div class="icons">
+                <a href="./../pages/login.html">
+                    <img src="./../icons/user.png" class="icon icon-img">
+                </a>
+                <a href="./../pages/orders.html">
+                    <img src="./../icons/cart.png" class="icon icon-img">
+                </a>
+            </div>
+
+            <input type="checkbox" class="menu-toggle" id="menu-toggle">
+            <label for="menu-toggle" class="menu-toggle-label">
+                <div></div>
+                <div></div>
+                <div></div>
+            </label>
+
+            <ul class="navbar-nav">
+                <li><a href="./../pages/plants.html">Plants</a>
+                    <div class="dropdown">
+                        <a href="./../pages/indoor.html">Indoor Plants</a>
+                        <a href="./../pages/flower.html">Flowering Plants</a>
+                        <a href="./../pages/fruit.html">Fruit Plants</a>
+                        <a href="./../pages/medicinal.html">Medicinal Plants</a>
+                    </div>
+                </li>
+                <li><a href="./../pages/seeds.html">Seeds</a>
+                    <div class="dropdown">
+                        <a href="./../pages/flowerseed.html">Flower Seeds</a>
+                        <a href="./../pages/vegetable.html">Vegetable Seeds</a>
+                        <a href="./../pages/bulb.html">Flower Bulbs</a>
+                        <a href="./../pages/fruitseed.html">Fruit Seeds</a>
+                        <a href="./../pages/herbseed.html">Herbs Seeds</a>
+                    </div>
+                </li>
+                <li><a href="./../pages/pots_n_planters.html">Pots & Planters</a>
+                </li>
+                <li><a href="./../pages/plantcare.html">Plant Care</a>
+                    <div class="dropdown">
+                        <a href="./../pages/fertilizer.html"> Fertilizer And Potting Mix</a>
+                        <a href="./../pages/garden.html">Gardening Tools</a>
+                        <a href="./../pages/accesories.html">Our Accesories</a>
+                       
+                    </div>
+                </li>   
+                <li><a href="./../pages/gifts.html">Gifts</a></li>
+                <li><a href="./../pages/blogs.html">Blogs</a></li>
+                <li><a href="./../pages/about.html">About Us</a></li>
+                <li><a href="./../pages/contact.html">Contact Us</a></li>
+            </ul>
+        </div>
+    </header>
 
     <div class="container">
         <h1 class="sc">Pots & Planters</h1>
@@ -168,37 +78,37 @@ footer a:hover {
                 <img src="./../images/pots/plastic.jpeg" alt="Plastic Pots">
                 <h3>Plastic Pots</h3>
                 <p>Durable and lightweight plastic pots in various sizes and designs.</p>
-                <button>Buy Now</button>
+                <a href="./../pages/orders.html"><button><b>Add to Cart</b></button></a>
             </div>
             <div class="card">
                 <img src="./../images/pots/ceramic.webp" alt="Ceramic Pots">
                 <h3>Ceramic Pots</h3>
                 <p>Elegant ceramic pots for indoor and outdoor decor.</p>
-                <button>Buy Now</button>
+                <a href="./../pages/orders.html"><button><b>Add to Cart</b></button></a>
             </div>
             <div class="card">
                 <img src="./../images/pots/hanging.jpg" alt="Hanging Planters">
                 <h3>Hanging Planters</h3>
                 <p>Perfect for small spaces, bringing greenery to your walls.</p>
-                <button>Buy Now</button>
+                <a href="./../pages/orders.html"><button><b>Add to Cart</b></button></a>
             </div>
             <div class="card">
                 <img src="./../images/pots/woodan.webp" alt="Wooden Planters">
                 <h3>Wooden Planters</h3>
                 <p>Eco-friendly and rustic planters made from natural wood.</p>
-                <button>Buy Now</button>
+                <a href="./../pages/orders.html"><button><b>Add to Cart</b></button></a>
             </div>
             <div class="card">
                 <img src="./../images/pots/stand.webp" alt="Plant Stands">
                 <h3>Plant Stands</h3>
                 <p>Stylish stands to organize and display your plants beautifully.</p>
-                <button>Buy Now</button>
+                <a href="./../pages/orders.html"><button><b>Add to Cart</b></button></a>
             </div>
             <div class="card">
                 <img src="./../images/pots/tray.webp" alt="Seedling Trays">
                 <h3>Seedling Trays</h3>
                 <p>Ideal for starting seeds and growing healthy saplings.</p>
-                <button>Buy Now</button>
+                <a href="./../pages/orders.html"><button><b>Add to Cart</b></button></a>
             </div>
         </div>
     </div>
