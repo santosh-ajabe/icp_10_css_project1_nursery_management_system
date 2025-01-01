@@ -1,0 +1,155 @@
+.hero {
+    background-image: url('./../images/index/bg.avif');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 100px 20px;
+    text-align: center;
+    position: relative;
+}
+
+.hero h2 {
+    font-size: 4rem;
+    font-weight: 700;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.hero button {
+    padding: 12px 30px;
+    background-color: #4caf50;
+    border: none;
+    border-radius: 30px;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.hero button:hover {
+    background-color: #388e3c;
+}
+
+.featured-products {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 50px 20px;
+}
+
+.product-card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+    transform: scale(1.05);
+}
+
+.product-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.product-card h3 {
+    font-size: 1.5rem;
+    margin-top: 10px;
+}
+
+.product-card p {
+    font-size: 1rem;
+    color: #777;
+    margin: 10px 0;
+}
+
+.product-card button {
+    padding: 10px 20px;
+    background-color: #4caf50;
+    border: none;
+    border-radius: 30px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.product-card button:hover {
+    background-color: #388e3c;
+}
+
+
+.bestsellers {
+padding: 50px 20px;
+background-color: #f9fafb;
+text-align: center;
+margin-bottom: 50px;
+}
+
+.section-title {
+font-size: 2.5rem;
+font-weight: bold;
+color: #2b7a4b;
+margin-bottom: 30px;
+}
+
+.bestseller-products {
+display: grid;
+grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+gap: 20px;
+}
+
+.bestseller-products .product-card {
+background-color: white;
+padding: 20px;
+border-radius: 10px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.bestseller-products .product-card:hover {
+transform: scale(1.05);
+box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.bestseller-products img {
+width: 100%;
+height: 200px;
+object-fit: cover;
+border-radius: 8px;
+}
+
+.bestseller-products h3 {
+font-size: 1.5rem;
+color: #2b7a4b;
+margin-top: 15px;
+}
+
+.bestseller-products p {
+font-size: 1rem;
+color: #777;
+margin: 10px 0;
+}
+
+.bestseller-products button {
+padding: 10px 20px;
+background-color: #4caf50;
+border: none;
+border-radius: 30px;
+color: white;
+font-size: 16px;
+cursor: pointer;
+transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.bestseller-products button:hover {
+background-color: #388e3c;
+transform: scale(1.05);
+}

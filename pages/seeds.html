@@ -3,6 +3,7 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>seeds-page</title>
+    <link rel="stylesheet" href="../css/plants.css">
     <style>
              * {
             margin: 0;
@@ -229,12 +230,14 @@
         }
         .seedsowing{
             width: 100%;
-            height: 450px;
-            margin-bottom: 30px;
+            height: 390px;
+            margin-bottom: 20px;
             
         }
         .seed2{
             margin-top: 35px;
+            margin-bottom: 5px;
+            
         }
         .titlee{
             font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
@@ -242,9 +245,9 @@
             text-align: center;
             color: #1a5d1e;
             font-size: 41px;
-            margin-top: 20px;
+            margin-top: 5px;
             margin-left: 30px;
-            margin-bottom: 30px;
+            margin-bottom: 17px;
         }
         .type-containers{
             display: flex;
@@ -259,7 +262,7 @@
             border-color: #333;
             border-width: 2px;
             margin: 5px;
-            border-radius: 10px;
+            border-radius: 200px;
         }
         .type2{
             height: 310px; 
@@ -308,7 +311,70 @@
             transition: 0.5;
             
         }
+       .footer {
+    text-align: center;
+    padding: 5px 10px;
+    background-color: #333;
+    color: white;
+    width: 100%;
+}
+
+.footer {
+    font-size: 18px;
+    margin-top: 0px;
+}
+
+.footer .social-icons a {
+    color: white;
+    margin: 0 10px;
+    font-size: 20px;
+    text-decoration: none;
+}
+.footer-tag{
+    color: white;
     
+    
+}
+
+.footer .social-icons a:hover {
+    color: red;
+    box-shadow: 0cm;
+}
+.footer {
+    background-color: #3a9e67;
+    padding: 20px 0;
+    text-align: center;
+    color: white;
+    margin-top: 40px;
+}
+
+.footer a {
+    color: #fff;
+    text-decoration: underline;
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: #ffd700;
+}
+.iconn{
+    height: 47px;
+    border-radius: 100px;
+    margin-top: 10px;
+    margin-left: 2px;
+    margin-right: 2px;
+}
+.iconn:hover{
+    border: none;
+    box-shadow: 0 0 8px 6px gray;
+    background-color: aliceblue;
+    transition: 0.5;
+    height: 70px;
+ 
+}
+
+
     
 
     </style>
@@ -325,8 +391,12 @@
             </div>
 
             <div class="icons">
-                <img src="../images/index/logo.jpg" class="icon icon-img">
-                <img src="../images/index/logo.jpg" class="icon icon-img">
+                <a href="./../pages/login.html">
+                    <img src="./../icons/user.png" class="icon icon-img">
+                </a>
+                <a href="./../pages/cart.html">
+                    <img src="./../icons/cart.png" class="icon icon-img">
+                </a>
             </div>
 
             <input type="checkbox" class="menu-toggle" id="menu-toggle">
@@ -337,441 +407,82 @@
             </label>
 
             <ul class="navbar-nav">
-                <li><a href="../pages/plants.html">Plants</a>
+                <li><a href="./../pages/plants.html">Plants</a>
                     <div class="dropdown">
-                        <a href="#">Indoor Plants</a>
-                        <a href="#">Pet Friendly Plants</a>
-                        <a href="#">Flowering Plants</a>
-                        <a href="#">Fruit Plants</a>
-                        <a href="#">Medicinal Plants</a>
+                        <a href="./../pages/indoor.html">Indoor Plants</a>
+                        <a href="./../pages/flower.html">Flowering Plants</a>
+                        <a href="./../pages/fruit.html">Fruit Plants</a>
+                        <a href="./../pages/medicinal.html">Medicinal Plants</a>
                     </div>
                 </li>
-                <li><a href="../pages/seeds.html">Seeds</a>
+                <li><a href="./../pages/seeds.html">Seeds</a>
                     <div class="dropdown">
-                        <a href="#">Flower Seeds</a>
-                        <a href="#">Vegetable Seeds</a>
-                        <a href="#">Flower Bulbs</a>
-                        <a href="#">Fruit Seeds</a>
-                        <a href="#">Herbs Seeds</a>
+                        <a href="./../pages/flowerseed.html">Flower Seeds</a>
+                        <a href="./../pages/vegetable.html">Vegetable Seeds</a>
+                        <a href="./../pages/bulb.html">Flower Bulbs</a>
+                        <a href="./../pages/fruitseed.html">Fruit Seeds</a>
+                        <a href="./../pages/herbseed.html">Herbs Seeds</a>
                     </div>
                 </li>
-                <li><a href="../pages/pots_n_planters.html">Pots & Planters</a>
-                    <div class="dropdown">
-                        <a href="#">Plastic Pots</a>
-                        <a href="#">Ceramic Pots</a>
-                        <a href="#">Hanging Planters</a>
-                        <a href="#">Wooden Planters</a>
-                        <a href="#">Plant Stands</a>
-                        <a href="#">Seedling Trays</a>
-                    </div>
+                <li><a href="./../pages/pots_n_planters.html">Pots & Planters</a>
                 </li>
-                <li><a href="../pages/plantcare.html">Plant Care</a>
+                <li><a href="./../pages/plantcare.html">Plant Care</a>
                     <div class="dropdown">
-                        <a href="#">Potting Mix</a>
-                        <a href="#">Cocopeat</a>
-                        <a href="#">Urea</a>
-                        <a href="#">Fungicide</a>
-                        <a href="#">Gardening Tools</a>
+                        <a href="./../pages/fertilizer.html"> Fertilizer And Potting Mix</a>
+                        <a href="./../pages/garden.html">Gardening Tools</a>
+                        <a href="./../pages/accesories.html">Our Accesories</a>
+                       
                     </div>
-                </li>
-                <li><a href="./pages/gifts.html">Gifts</a></li>
-                <li><a href="./pages/blogs.html">Blogs</a></li>
-                <li><a href="./pages/about.html">About Us</a></li>
-                <li><a href="./pages/contact.html">Contact Us</a></li>
+                </li>   
+                <li><a href="./../pages/gifts.html">Gifts</a></li>
+                <li><a href="./../pages/blogs.html">Blogs</a></li>
+                <li><a href="./../pages/about.html">About Us</a></li>
+                <li><a href="./../pages/contact.html">Contact Us</a></li>
             </ul>
         </div>
     </header>
         <img src="../images/seeds/seedsowing.png" class="seedsowing"/>
-    
-   
+     
      <div class="titlee">
         SHOP BY CATEGORIES
     </div>
-    
-    <div class="type-containers">
-    
+        <div class="type-containers">
+        <a href="flowerseed.html">
        <div> <img src="../images/seeds/flower.webp"  class="type5"/>
             <p class="names">Flower-seeds</p>
        </div>
-        <a href="Vegetable-seed">
+       </a>
+        <a href="vegetable.html">
        <div> <img src="../images/seeds/vegetable.webp" class="type5"/>
             <p class="names">Vegetable-seeds</p>
         </div>
         </a>
-
+        <a href="bulb.html">
         <div> <img src="../images/seeds/bulb.webp" class="type5"/>
-            <p class="names"> Flower-Bulbs</p>
+            <p class="names"> Flower-Bulb</p>
         </div>
-
+        </a>
+        
+        <a href="fruitseed.html">
        <div> <img src="../images/seeds/fruit.webp" class="type5"/>
             <p class="names">Fruit-seeds</p>
         </div>
-
+        </a>
+        <a href="herbseed.html">
        <div> <img src="../images/seeds/herbs.webp" class="type5"/>
          <p class="names">Herb-seeds</p>
        </div>
-    </div>
+       </a>
+    </div>    
     <img src="../images/seeds/seedsgift.png" class="seedsowing seed2"/>
-   
-     <div class="titlee">Flower-seeds</div>
 
-     <div class="type-containers">
-    
-     
-        <div> <img src="../images/flowerseed/California_Poppy_Mix.webp" class="type5 type2"/>
-             <p class="names addition"><u>California_Poppy_Mix</u><br/><h3 class="rupees">₹40</h3></p>
-             <div class="buy-button">Buy Now</div>
-         </div>
-
-         <div> <img src="../images/flowerseed/Carinatum_Mix-Winter.webp"  class="type5 type2"/>
-            <p class="names addition"><u>Carinatum_Mix-Winter</u><br/><h3 class="rupees">₹50</h3></p>
-            <div class="buy-button">Buy Now</div>
-       </div>
- 
-         <div> <img src="../images/flowerseed/Clarkia_Elegans.webp" class="type5 type2"/>
-             <p class="names addition"><u>Clarkia_Elegans</u><br/><h3 class="rupees">₹45</h3></p>
-             <div class="buy-button">Buy Now</div>
-         </div>
- 
-         <div> <img src="../images/flowerseed/Godetia_Azaleaflora_Mix.webp" class="type5 type2"/>
-            <p class="names addition"><u>Godetia-Azaleaflora-Mix</u><br/><h3 class="rupees">₹70</h3></p>
-            <div class="buy-button">Buy Now</div>
-        </div>
- 
-        <div> <img src="../images/flowerseed/Dahlia_Unwins_Hybrids_Flower.webp" class="type5 type2"/>
-          <p class="names addition"><u>Dahlia-Unwiins</u><br/><h3 class="rupees">₹70</h3></p>
-          <div class="buy-button">Buy Now</div>
-        </div>
-        . 
-        <div> <img src="../images/flowerseed/Dimorphotheca_Flower_Seeds.webp" class="type5 type2"/>
-            <p class="names addition"><u>Dimorphotheca-Flower</u><br/><h3 class="rupees">₹50</h3></p>
-            <div class="buy-button">Buy Now</div>
-        </div>
-
-        <div> <img src="../images/flowerseed/Cleome_Spinosa_Mix-Seeds.webp" class="type5 type2"/>
-            <p class="names addition"><u>Cleome_Spinosa_Mix-Seeds</u><br/><h3 class="rupees">₹40</h3></p>
-            <div class="buy-button">Buy Now</div>
-        </div>
-
-        <div> <img src="../images/flowerseed/Gazania_Star_Light_Dwarf.webp"  class="type5 type2"/>
-           <p class="names addition"><u>Gazania-Star-Light-Dwarf</u><br/><h3 class="rupees">₹30</h3></p>
-           <div class="buy-button">Buy Now</div>
-      </div>
-
-    
-
-       <div> <img src="../images/flowerseed/Ipomoea_Morning_Glory.webp" class="type5 type2"/>
-            <p class="names addition"><u>Ipomoea-Morning-Glory</u><br/><h3 class="rupees">₹85</h3></p>
-            <div class="buy-button">Buy Now</div>
-        </div>
-
-       <div> <img src="../images/flowerseed/Lupin_Hartwegii_Giant_Flowered_Tall_Mix-Seed_1.webp" class="type5 type2"/>
-         <p class="names addition"><u>Lupin-Hartwegii</u><br/><h3 class="rupees">₹90</h3></p>
-         <div class="buy-button">Buy Now</div>
-       </div>
-
-
-
-        </div>
-
-
-     <div class="titlee">Vegetable-seed</div>
-       
-    <div class="type-containers">
-    
-     
-        <div> <img src="../images/seeds/Brinjal_Purple_Oval.webp" class="type5 type2"/>
-             <p class="names addition"><u>Brinjal-Purple-Oval</u><br/><h3 class="rupees">₹40</h3></p>
-             <div class="buy-button">Buy Now</div>
-         </div>
-
-         <div> <img src="../images/seeds/Brinjal_Long_Green.webp"  class="type5 type2"/>
-            <p class="names addition"><u>Brinjal-Long-Green</u><br/><h3 class="rupees">₹100</h3></p>
-            <div class="buy-button">Buy Now</div>
-       </div>
- 
-         <div> <img src="../images/seeds/BrinjalKalongi.webp" class="type5 type2"/>
-             <p class="names addition"><u>Brinjal-Kalongi</u><br/><h3 class="rupees">₹45</h3></p>
-             <div class="buy-button">Buy Now</div>
-         </div>
- 
-        <div> <img src="../images/seeds/BrinjalSmallOval.jpg" class="type5 type2"/>
-             <p class="names addition"><u>Brinjal-Small-Oval</u><br/><h3 class="rupees">₹40</h3></p>
-             <div class="buy-button">Buy Now</div>
-         </div>
- 
-        <div> <img src="../images/seeds/KohlrabiPurple.webp" class="type5 type2"/>
-          <p class="names addition"><u>Kohlrabi-Purple</u><br/><h3 class="rupees">₹70</h3></p>
-          <div class="buy-button">Buy Now</div>
-        </div>
-        . 
-      
-
-        <div> <img src="../images/seeds/Cabbage-Red.webp"  class="type5 type2"/>
-           <p class="names addition"><u>Cabbage-Red</u><br/><h3 class="rupees">₹55</h3></p>
-           <div class="buy-button">Buy Now</div>
-      </div>
-
-      <div> <img src="../images/seeds/cabbageSivoy.webp" class="type5 type2"/>
-        <p class="names addition"><u>Cabbage-Sivoy</u><br/><h3 class="rupees">₹68</h3></p>
-        <div class="buy-button">Buy Now</div>
-     </div>
-
-        <div> <img src="../images/seeds/Cabbage.webp" class="type5 type2"/>
-            <p class="names addition"><u>Cabbage</u><br/><h3 class="rupees">₹30</h3></p>
-            <div class="buy-button">Buy Now</div>
-        </div>
-
-        <div> <img src="../images/seeds/Kawach_open.webp" class="type5 type2"/>
-            <p class="names addition"><u>Kawach-open</u><br/><h3 class="rupees">₹90</h3></p>
-            <div class="buy-button">Buy Now</div>
-          </div>
-
-       <div> <img src="../images/seeds/Cabbage_Desi.webp" class="type5 type2"/>
-            <p class="names addition"><u>Cabbage-Desi</u><br/><h3 class="rupees">₹60</h3></p>
-            <div class="buy-button">Buy Now</div>
-        </div>
-        . 
-        
-        <div> <img src="../images/seeds/Capsicum-Red_and_Yellow.webp"  class="type5 type2"/>
-            <p class="names addition"><u>Capsicum-Red-and-Yellow</u><br/><h3 class="rupees">₹100</h3></p>
-            <div class="buy-button">Buy Now</div>
-       </div>
- 
-       <div> <img src="../images/seeds/Capsicum_Green.webp" class="type5 type2"/>
-         <p class="names addition"><u>Capsicum-Green</u><br/><h3 class="rupees">₹50</h3></p>
-         <div class="buy-button">Buy Now</div>
-      </div>
- 
-         <div> <img src="../images/seeds/Capsicum_Mix_Color.webp" class="type5 type2"/>
-             <p class="names addition"><u>Capsicum-Mix-Color</u><br/><h3 class="rupees">₹84</h3></p>
-             <div class="buy-button">Buy Now</div>
-         </div>
- 
-         <div> <img src="../images/seeds/TomatoDarkPurple.webp" class="type5 type2"/>
-             <p class="names addition"><u>Tomato-Dark-Purple</u><br/><h3 class="rupees">₹87</h3></p>
-             <div class="buy-button">Buy Now</div>
+    <footer>
+        <h3 class="footer-tag">Connect with us</h3>
+        <div class="social-icons">
+            <a href="https://twitter.com" target="_blank" class="fab fa-twitter" title="Twitter"><img src="../icons/twitter.png" class="iconn"/></a>
+            <a href="https://instagram.com" target="_blank" class="fab fa-instagram" title="Instagram"><img src="../icons/instaicon.jpg" class="iconn"/></a>
+            <a href="https://wa.me/+918010333840" target="_blank" class="fab fa-whatsapp" title="WhatsApp"><img src="../icons/wpicon.png" class="iconn"/></a>
            </div>
- 
-        <div> <img src="../images/seeds/TomatoRed.webp" class="type5 type2"/>
-             <p class="names addition"><u>Tomato-Red</u><br/><h3 class="rupees">₹99</h3></p>
-             <div class="buy-button">Buy Now</div>
-         </div>
-         . 
-         <div> <img src="../images/seeds/Capsicum_Mix_color3.webp"  class="type5 type2"/>
-            <p class="names addition"><u>Capsicum-Mix-Color</u><br/><h3 class="rupees">₹120</h3></p>
-            <div class="buy-button">Buy Now</div>
-       </div>
- 
-       <div> <img src="../images/seeds/Kasoori_Methi.webp" class="type5 type2"/>
-         <p class="names addition"><u>Kasoori-Methi</u><br/><h3 class="rupees">₹40</h3></p>
-         <div class="buy-button">Buy Now</div>
-      </div>
- 
-         <div> <img src="../images/seeds/Cauliflower_Purple.jpg" class="type5 type2"/>
-             <p class="names addition"><u>Cauliflower-Purple</u><br/><h3 class="rupees">₹90</h3></p>
-             <div class="buy-button">Buy Now</div>
-         </div>
- 
-         <div> <img src="../images/seeds/Cauliflower_Yellow.webp" class="type5 type2"/>
-             <p class="names addition"><u>Cauliflower-Yellow</u><br/><h3 class="rupees">₹50</h3></p>
-             <div class="buy-button">Buy Now</div>
-           </div>
- 
-        <div> <img src="../images/seeds/CauliflowerGreen.webp" class="type5 type2"/>
-             <p class="names addition"><u>Cauliflower-Green</u><br/><h3 class="rupees">₹40</h3></p>
-             <div class="buy-button">Buy Now</div>
-         </div>
-         . 
-
-
-
-
-     </div>
-    
-   
-    
-    
-
-     <div class="titlee">Flower-Bulbs</div>
-
-     
-     <div class="type-containers">
-    
-     
-        <div> <img src="../images/bulbseed/Asiatic_Lily_Mix_Flower_-_3_Bulb.webp" class="type5 type2"/>
-             <p class="names addition"><u>Asiatic-Lily-Mix</u><br/><h3 class="rupees">₹66</h3></p>
-             <div class="buy-button">Buy Now</div>
-         </div>
-
-         <div> <img src="../images/bulbseed/Asiatic_Pink_Lily_Flower_-_3_Bulbs.webp"  class="type5 type2"/>
-            <p class="names addition"><u>Asiatic-Pink-Lily</u><br/><h3 class="rupees">₹82</h3></p>
-            <div class="buy-button">Buy Now</div>
-       </div>
-
-       <div> <img src="../images/bulbseed/Gladiolus_Mix_Flower-3_Bulbs.webp" class="type5 type2"/>
-        <p class="names addition"><u>Gladiolus-Mix-Flower</u><br/><h3 class="rupees">₹79</h3></p>
-        <div class="buy-button">Buy Now</div>
-      </div>
- 
-         <div> <img src="../images/bulbseed/Crinum-lily-pink.webp" class="type5 type2"/>
-             <p class="names addition"><u>Crinum-lily-pink</u><br/><h3 class="rupees">₹48</h3></p>
-             <div class="buy-button">Buy Now</div>
-         </div>
- 
-        <div> <img src="../images/bulbseed/Daffodil_White_Flower-3_Bulbs.webp" class="type5 type2"/>
-             <p class="names addition"><u>Daffodil-White-Flower</u><br/><h3 class="rupees">₹35</h3></p>
-             <div class="buy-button">Buy Now</div>
-         </div>
- 
-        
-        . 
-        <div> <img src="../images/bulbseed/Lilium_White_Flower_Bulb.webp" class="type5 type2"/>
-            <p class="names addition"><u>Crinum-lily-pink</u><br/><h3 class="rupees">₹55</h3></p>
-            <div class="buy-button">Buy Now</div>
-        </div>
-
-       <div> <img src="../images/bulbseed/Lilium_Red_Flower_Bulb.webp" class="type5 type2"/>
-            <p class="names addition"><u>Lilium-Red</u><br/><h3 class="rupees">₹75</h3></p>
-            <div class="buy-button">Buy Now</div>
-        </div>
-
-      
-
-       <div> <img src="../images/flowerseed/Petunia_Nana_Compacta_Mix-Seeds.webp" class="type5 type2"/>
-        <p class="names addition"><u>Petunia-Nana</u><br/><h3 class="rupees">₹92</h3></p>
-        <div class="buy-button">Buy Now</div>
-    </div>
-
-   <div> <img src="../images/flowerseed/Dimorphotheca_Flower_Seeds.webp" class="type5 type2"/>
-     <p class="names addition"><u>Dimorphotheca-Flower</u><br/><h3 class="rupees">₹100</h3></p>
-     <div class="buy-button">Buy Now</div>
-   </div>
-
-        
-       <div> <img src="../images/bulbseed/RajnigandhaFlowerBulbs-SetOf2.webp" class="type5 type2"/>
-        <p class="names addition"><u>Rajnigandha</u><br/><h3 class="rupees">₹60</h3></p>
-        <div class="buy-button">Buy Now</div>
-      </div>
-
-
-        </div>
-
-  
-     <div class="titlee">Fruit-seeds</div>
-
-     <div class="type-containers">
-    
-     
-        <div> <img src="../images/fruitseed/Cape_Gooseberry_-_Open_Pollination_Seeds.webp" class="type5 type2"/>
-             <p class="names addition"><u>Cape-Gooseberry</u><br/><h3 class="rupees">₹40</h3></p>
-             <div class="buy-button">Buy Now</div>
-         </div>
-
-         <div> <img src="../images/fruitseed/CucumberLightGreenSeeds.webp"  class="type5 type2"/>
-            <p class="names addition"><u>Cucumber-LightGreen</u><br/><h3 class="rupees">₹50</h3></p>
-            <div class="buy-button">Buy Now</div>
-       </div>
- 
-         <div> <img src="../images/fruitseed/Desi_Muskmelon_Open_Pollination_Seed.webp" class="type5 type2"/>
-             <p class="names addition"><u>Desi-Muskmelon</u><br/><h3 class="rupees">₹45</h3></p>
-             <div class="buy-button">Buy Now</div>
-         </div>
- 
-        <div> <img src="../images/fruitseed/Grapes_Yellow_Tomato-Seeds.webp" class="type5 type2"/>
-             <p class="names addition"><u>Grapes-Yellow-Tomato</u><br/><h3 class="rupees">₹40</h3></p>
-             <div class="buy-button">Buy Now</div>
-         </div>
- 
-        <div> <img src="../images/fruitseed/Long_melon-Long_Kakri_-_Open_Pollination_Seeds.webp" class="type5 type2"/>
-          <p class="names addition"><u>Long_melon-Kakri</u><br/><h3 class="rupees">₹70</h3></p>
-          <div class="buy-button">Buy Now</div>
-        </div>
-        . 
-        <div> <img src="../images/fruitseed/Muskmelon-Hybrid-Seed.webp" class="type5 type2"/>
-            <p class="names addition"><u>Cape-Gooseberry</u><br/><h3 class="rupees">₹45</h3></p>
-            <div class="buy-button">Buy Now</div>
-        </div>
-
-        <div> <img src="../images/fruitseed/Papaya_Desi.webp"  class="type5 type2"/>
-           <p class="names addition"><u>Cucumber-LightGreen</u><br/><h3 class="rupees">₹40</h3></p>
-           <div class="buy-button">Buy Now</div>
-      </div>
-
-        <div> <img src="../images/fruitseed/Strawberries_FragariaVesca.webp" class="type5 type2"/>
-            <p class="names addition"><u>Desi-Muskmelon</u><br/><h3 class="rupees">₹75</h3></p>
-            <div class="buy-button">Buy Now</div>
-        </div>
-
-       <div> <img src="../images/fruitseed/Water_Melon_Fruit_Seed_Hybrid.webp" class="type5 type2"/>
-            <p class="names addition"><u>Grapes-Yellow-Tomato</u><br/><h3 class="rupees">₹60</h3></p>
-            <div class="buy-button">Buy Now</div>
-        </div>
-
-       <div> <img src="../images/fruitseed/Watermelon_Sugar_Baby_-_Open_Pollination_Seeds.webp" class="type5 type2"/>
-         <p class="names addition"><u>Long_melon-Kakri</u><br/><h3 class="rupees">₹80</h3></p>
-         <div class="buy-button">Buy Now</div>
-       </div>
-
-
-        </div>
-     <div class="titlee">Herb-seeds</div>
-
-     
-     <div class="type-containers">
-    
-     
-        <div> <img src="../images/herbseed/BorageSeeds.webp" class="type5 type2"/>
-             <p class="names addition"><u>Borage-Seeds</u><br/><h3 class="rupees">₹40</h3></p>
-             <div class="buy-button">Buy Now</div>
-         </div>
-
-         <div> <img src="../images/herbseed/ChivesSeeds.webp"  class="type5 type2"/>
-            <p class="names addition"><u>Chives-Seeds</u><br/><h3 class="rupees">₹50</h3></p>
-            <div class="buy-button">Buy Now</div>
-       </div>
- 
-         <div> <img src="../images/herbseed/Coriander.webp" class="type5 type2"/>
-             <p class="names addition"><u>Coriander</u><br/><h3 class="rupees">₹45</h3></p>
-             <div class="buy-button">Buy Now</div>
-         </div>
- 
-        <div> <img src="../images/herbseed/Dill_Seeds.jpg" class="type5 type2"/>
-             <p class="names addition"><u>Dill-Seeds</u><br/><h3 class="rupees">₹40</h3></p>
-             <div class="buy-button">Buy Now</div>
-         </div>
- 
-        <div> <img src="../images/herbseed/FennellFlorence.webp" class="type5 type2"/>
-          <p class="names addition"><u>Fennell-Florence</u><br/><h3 class="rupees">₹70</h3></p>
-          <div class="buy-button">Buy Now</div>
-        </div>
-        . 
-        <div> <img src="../images/herbseed/Green_Basil_Seed_Hybrid.webp" class="type5 type2"/>
-            <p class="names addition"><u>Green-Basil-Seed</u><br/><h3 class="rupees">₹60</h3></p>
-            <div class="buy-button">Buy Now</div>
-        </div>
-
-        <div> <img src="../images/herbseed/LavenderSeeds.webp"  class="type5 type2"/>
-           <p class="names addition"><u>Lavender-Seeds</u><br/><h3 class="rupees">₹45</h3></p>
-           <div class="buy-button">Buy Now</div>
-      </div>
-
-        <div> <img src="../images/herbseed/Lemon_Basil_Seeds.webp" class="type5 type2"/>
-            <p class="names addition"><u>Lemon-Basil-Seeds</u><br/><h3 class="rupees">₹50</h3></p>
-            <div class="buy-button">Buy Now</div>
-        </div>
-
-       <div> <img src="../images/herbseed/LemonBalmSeeds.webp" class="type5 type2"/>
-            <p class="names addition"><u>Lemon-Balm</u><br/><h3 class="rupees">₹65</h3></p>
-            <div class="buy-button">Buy Now</div>
-        </div>
-
-       <div> <img src="../images/herbseed/Pudina-seeds.webp" class="type5 type2"/>
-         <p class="names addition"><u>Pudina-Seeds</u><br/><h3 class="rupees"></h3>₹30</p>
-         <div class="buy-button">Add To Cart</div>
-       </div>
-
-
-        </div>
+    </footer>
 </body>
 </html>

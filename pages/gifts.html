@@ -3,228 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="./../css/navbar.css">
     <title>WE MAKE YOUR LIFE GREEN...</title>
     <style>
-         * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f0f8f1;
-            color: #333;
-        }
-
-        header {
-            background: linear-gradient(135deg, #3a9e67, #2b7a4b);
-            padding: 20px 30px;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            width: 100%;
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-            transition: background 0.3s ease;
-        }
-
-        .navbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .logo {
-            font-size: 2.5rem;
-            font-weight: bold;
-            color: white;
-            display: flex;
-            align-items: center;
-            text-transform: uppercase;
-            transition: transform 0.3s ease;
-        }
-
-        .logo img {
-            width: 50px;
-            margin-right: 15px;
-        }
-
-        .logo:hover {
-            transform: scale(1.1);
-        }
-
-        .search-bar {
-            display: flex;
-            align-items: center;
-            position: relative;
-            flex: 1;
-            margin-left: 20px;
-        }
-
-        .search-bar input {
-            padding: 15px 20px;
-            font-size: 18px;
-            border-radius: 30px;
-            border: none;
-            outline: none;
-            width: 80%;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            transition: width 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .search-bar input:focus {
-            width: 100%;
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-        }
-
-        .search-bar button {
-            position: absolute;
-            right: 0;
-            padding: 15px 30px;
-            background-color: #4caf50;
-            border: none;
-            border-radius: 30px;
-            color: white;
-            font-size: 18px;
-            cursor: pointer;
-            transition: background 0.3s ease, transform 0.3s ease;
-        }
-
-        .search-bar button:hover {
-            background-color: #388e3c;
-            transform: scale(1.1);
-        }
-
-        .icons {
-            display: flex;
-            gap: 20px;
-            align-items: center;
-            margin-left: 20px;
-            margin-right: 0;
-        }
-
-        .icon {
-            font-size: 2.5rem;
-            font-weight: bold;
-            color: white;
-            display: flex;
-            align-items: center;
-            text-transform: uppercase;
-            transition: transform 0.3s ease;
-        }
-
-        .icon-img {
-            width: 50px;
-            margin-right: 15px;
-        }
-
-        .icon:hover {
-            transform: scale(1.1);
-        }
-
-        .navbar-nav {
-            display: flex;
-            gap: 25px;
-            align-items: center;
-        }
-
-        .navbar-nav li {
-            position: relative;
-            list-style: none;
-        }
-
-        .navbar-nav a {
-            text-decoration: none;
-            color: white;
-            font-size: 20px;
-            font-weight: 700;
-            padding: 10px 15px;
-            display: block;
-            transition: color 0.3s ease, transform 0.3s ease, background 0.3s ease;
-            border-radius: 5px;
-        }
-
-        
-
-        .dropdown {
-            display: none;
-            position: absolute;
-            top: 100%;
-            left: 0;
-            background-color: #388e3c;
-            padding: 10px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
-
-        .navbar-nav li:hover .dropdown {
-            display: block;
-        }
-
-        .dropdown a {
-            color: white;
-            padding: 10px 20px;
-            font-size: 14px;
-            transition: background 0.3s ease;
-        }
-
-        .dropdown a:hover {
-            background-color: #4caf50;
-        }
-
-        @media screen and (max-width: 768px) {
-            .navbar-nav {
-                display: none;
-                flex-direction: column;
-                background-color: #388e3c;
-                position: absolute;
-                top: 70px;
-                left: 0;
-                width: 100%;
-                padding: 16px 0;
-            }
-
-            .menu-toggle:checked~.navbar-nav {
-                display: flex;
-            }
-
-            .menu-toggle-label {
-                display: flex;
-                cursor: pointer;
-                flex-direction: column;
-            }
-
-            .menu-toggle-label div {
-                width: 25px;
-                height: 3px;
-                background: white;
-                margin: 4px 0;
-            }
-
-            .search-bar {
-                display: flex;
-                margin-top: 20px;
-                width: 100%;
-                justify-content: center;
-            }
-
-            .search-bar input {
-                width: 80%;
-                margin-bottom: 10px;
-            }
-
-            .icons {
-                display: none;
-            }
-        }
-
-        .menu-toggle {
-            display: none;
-        }
-
        
         .giftgalleryimg{
             width:100%;
@@ -293,12 +75,33 @@
             transform: scale(1.05);
         }
         footer {
-            background-color: #4caf50;
-            color: white;
-            padding: 10px;
-            text-align: center;
-        }
-      
+    text-align: center;
+    padding: 5px 10px;
+    background-color: #333;
+    color: white;
+    width: 100%;
+}
+
+footer {
+    font-size: 18px;
+    margin: 5px 0;
+}
+
+footer .social-icons a {
+    color: white;
+    margin: 0 10px;
+    font-size: 20px;
+    text-decoration: none;
+}
+.footer_tag{
+    color: white;
+}
+
+footer .social-icons a:hover {
+    color: red;
+    box-shadow: 0cm;
+}
+
     </style>
 </head>
 <body>
@@ -315,8 +118,12 @@
             </div>
     
             <div class="icons">
-                <img src="./../images/index/logo.jpg" class="icon icon-img">
-                <img src="./../images/index/logo.jpg" class="icon icon-img">
+                <a href="./../pages/login.html">
+                    <img src="./../icons/user.png" class="icon icon-img">
+                </a>
+                <a href="./../pages/cart.html">
+                    <img src="./../icons/cart.png" class="icon icon-img">
+                </a>
             </div>
     
             <input type="checkbox" class="menu-toggle" id="menu-toggle">
@@ -329,41 +136,31 @@
             <ul class="navbar-nav">
                 <li><a href="./../pages/plants.html">Plants</a>
                     <div class="dropdown">
-                        <a href="#">Indoor Plants</a>
-                        <a href="#">Pet Friendly Plants</a>
-                        <a href="#">Flowering Plants</a>
-                        <a href="#">Fruit Plants</a>
-                        <a href="#">Medicinal Plants</a>
+                        <a href="./../pages/indoor.html">Indoor Plants</a>
+                        <a href="./../pages/flower.html">Flowering Plants</a>
+                        <a href="./../pages/fruit.html">Fruit Plants</a>
+                        <a href="./../pages/medicinal.html">Medicinal Plants</a>
                     </div>
                 </li>
                 <li><a href="./../pages/seeds.html">Seeds</a>
                     <div class="dropdown">
-                        <a href="#">Flower Seeds</a>
-                        <a href="#">Vegetable Seeds</a>
-                        <a href="#">Flower Bulbs</a>
-                        <a href="#">Fruit Seeds</a>
-                        <a href="#">Herbs Seeds</a>
+                        <a href="./../pages/flowerseed.html">Flower Seeds</a>
+                        <a href="./../pages/vegetable.html">Vegetable Seeds</a>
+                        <a href="./../pages/bulb.html">Flower Bulbs</a>
+                        <a href="./../pages/fruitseed.html">Fruit Seeds</a>
+                        <a href="./../pages/herbseed.html">Herbs Seeds</a>
                     </div>
                 </li>
                 <li><a href="./../pages/pots_n_planters.html">Pots & Planters</a>
-                    <div class="dropdown">
-                        <a href="#">Plastic Pots</a>
-                        <a href="#">Ceramic Pots</a>
-                        <a href="#">Hanging Planters</a>
-                        <a href="#">Wooden Planters</a>
-                        <a href="#">Plant Stands</a>
-                        <a href="#">Seedling Trays</a>
-                    </div>
                 </li>
                 <li><a href="./../pages/plantcare.html">Plant Care</a>
                     <div class="dropdown">
-                        <a href="#">Potting Mix</a>
-                        <a href="#">Cocopeat</a>
-                        <a href="#">Urea</a>
-                        <a href="#">Fungicide</a>
-                        <a href="#">Gardening Tools</a>
+                        <a href="./../pages/fertilizer.html"> Fertilizer And Potting Mix</a>
+                        <a href="./../pages/garden.html">Gardening Tools</a>
+                        <a href="./../pages/accesories.html">Our Accesories</a>
+                       
                     </div>
-                </li>
+                </li>   
                 <li><a href="./../pages/gifts.html">Gifts</a></li>
                 <li><a href="./../pages/blogs.html">Blogs</a></li>
                 <li><a href="./../pages/about.html">About Us</a></li>
@@ -386,58 +183,63 @@
             <div class="gift-item">
                 <img src=https://kellogggarden.com/wp-content/uploads/2021/01/Indoor-Succulent-Planter-.jpg>
                 <h3>Succulent Planter</h3>
-                <p>$200.00</p>
+                <p>₹200.00</p>
             </div>
 
             <div class="gift-item">
                 <img src="https://th.bing.com/th/id/OIP.54gyJIDvW0esihfcTO0SRAHaHa?rs=1&pid=ImgDetMain">
                 <h3>Fern Plant</h3>
-                <p>$250.00</p>
+                <p>₹250.00</p>
             </div>
 
             <div class="gift-item">
                 <img src="https://m.media-amazon.com/images/I/51CPQionJHL.jpg">
                 <h3>Rose plant</h3>
-                <p>$300.00</p>
+                <p>₹300.00</p>
             </div>
 
             <div class="gift-item">
                 <img src="https://images.immediate.co.uk/production/volatile/sites/10/2018/08/2048x1365-Plant-family-series-Crassulaceae-LI2903364-5acfb33.jpg?quality=45&resize=960,640">
                 <h3>kalanchoe plant</h3>
-                <p>$300.00</p>
+                <p>₹300.00</p>
             </div>
 
             <div class="gift-item">
                 <img src="https://i.pinimg.com/originals/5a/d5/31/5ad531a90097d047dcd8a82fc5c285b8.jpg">
                 <h3>campanula plant</h3>
-                <p>$200.00</p>
+                <p>₹200.00</p>
             </div>
 
             <div class="gift-item">
                 <img src="https://th.bing.com/th/id/OIP.nZZxgdL1cs4EqvyRbb1ylQHaHa?rs=1&pid=ImgDetMain">
                 <h3>chrysanthemum  flowering plant</h3>
-                <p>$400.00</p>
+                <p>₹400.00</p>
             </div>
             <div class="gift-item">
                 <img src="https://gardeningtips.in/wp-content/uploads/2021/03/peperomia-1546175_1920.jpg">
                 <h3>Greenium peperomia plant</h3>
-                <p>$300.00</p>
+                <p>₹300.00</p>
             </div>
             <div class="gift-item">
                 <img src="https://hortology.co.uk/cdn/shop/files/Maranta-leuconeura-var.-erythroneura-Herringbone-Plant-12x35cm-Babet-Plant-Pot-Camel-17x14cm_1000x.jpg?v=1716219940">
                 <h3>Herringbone plant</h3>
-                <p>$200.00</p>
+                <p>₹200.00</p>
             </div>
             <div class="gift-item">
                 <img src="https://www.atebits.com/wp-content/uploads/2019/02/IMG_0107_580x@2x.jpg">
                 <h3>Air Plant Decor</h3>
-                <p>$400.00</p>
+                <p>₹400.00</p>
             </div>
         </div>
     </section>
 
     <footer>
-        <p>&copy; Nature Nest gifts by us...@ reserved all rights</p>
+        <h3 class="footer_tag">Connect with us</h3>
+        <div class="social-icons">
+            <a href="https://twitter.com" target="_blank" class="fab fa-twitter" title="Twitter"></a>
+            <a href="https://instagram.com" target="_blank" class="fab fa-instagram" title="Instagram"></a>
+            <a href="https://wa.me/+918010333840" target="_blank" class="fab fa-whatsapp" title="WhatsApp"></a>
+        </div>
     </footer>
 </body>
 </html>

@@ -69,31 +69,34 @@
       
     }
 
-    /*footer */
-    footer{
-            background-color: #2b7a4b;
-            color: white;
-            padding: 20px 0;
-            text-align: center;
-        }
-
-        footer a {
-            color: white;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        footer a:hover {
-            color: #ff6f61;
-        }
-
-        footer ul {
-            list-style: none;
-            padding: 10px;
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-        }
+    footer {
+      text-align: center;
+      padding: 5px 10px;
+      background-color: #333;
+      color: white;
+      width: 100%;
+  }
+  
+  footer {
+      font-size: 18px;
+      margin: 5px 0;
+  }
+  
+  footer .social-icons a {
+      color: white;
+      margin: 0 10px;
+      font-size: 20px;
+      text-decoration: none;
+  }
+  .footer_tag{
+      color: white;
+  }
+  
+  footer .social-icons a:hover {
+      color: red;
+      box-shadow: 0cm;
+  }
+  
 
       
     
